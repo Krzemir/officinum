@@ -31,7 +31,7 @@ jobs:
           set net:reconnect-interval-base 5
           set sftp:auto-confirm yes
           open -u "$SFTP_USERNAME","$SFTP_PASSWORD" sftp://$SFTP_HOST:$SFTP_PORT
-          mkdir -p "$SFTP_REMOTE_PATH"
+          cd "$SFTP_REMOTE_PATH" || mkdir "$SFTP_REMOTE_PATH"
           cd "$SFTP_REMOTE_PATH"
           put -O . index.html
           mirror -R images images
