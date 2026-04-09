@@ -32,6 +32,8 @@ jobs:
           -mkdir $REMOTE_DIR
           cd $REMOTE_DIR
           put index.html
-          put -r images
+          -mkdir images
+          put images/okladka-dodatek.jpeg images/okladka-dodatek.jpeg
+          put images/okladka-glowna.jpeg images/okladka-glowna.jpeg
           bye
           EOF
