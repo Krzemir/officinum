@@ -32,7 +32,8 @@ jobs:
           -mkdir $REMOTE_DIR
           cd $REMOTE_DIR
           put index.html
-          put dziekuje.html
+          -mkdir dziekuje
+          put dziekuje/index.html dziekuje/index.html
           -mkdir images
           put images/favicon.svg images/favicon.svg
           put images/okladka-dodatek.png images/okladka-dodatek.png
