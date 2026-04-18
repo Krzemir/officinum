@@ -1,0 +1,68 @@
+:root {
+  --font-display: "Sora", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-page-bg: #020617;
+  --color-page-text: #ffffff;
+  --color-accent: #f97316;
+  --color-accent-strong: #ea580c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-page-bg);
+}
+
+body.lp-theme {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.15), transparent 24rem),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.1), transparent 28rem),
+    var(--color-page-bg);
+  color: var(--color-page-text);
+  font-family: var(--font-body);
+}
+
+.lp-theme .lp-display {
+  font-family: var(--font-display);
+}
+
+.lp-theme .lp-accent {
+  color: var(--color-accent);
+}
+
+.lp-theme .lp-accent-bg {
+  background-color: var(--color-accent);
+}
+
+.lp-theme .lp-accent-bg:hover {
+  background-color: var(--color-accent-strong);
+}
+
+.lp-theme h1,
+.lp-theme h2,
+.lp-theme h3,
+.lp-theme h4,
+.lp-theme h5,
+.lp-theme h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+.lp-theme img {
+  display: block;
+  max-width: 100%;
+}
+
+.lp-theme a {
+  color: inherit;
+}
+
+.lp-theme ::selection {
+  background: rgba(249, 115, 22, 0.22);
+}

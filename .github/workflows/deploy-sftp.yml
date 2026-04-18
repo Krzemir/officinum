@@ -24,6 +24,7 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_REMOTE_PATH: ${{ secrets.SFTP_REMOTE_PATH }}
         run: |
+          LANDING_SLUG="inwestowanie-w-kryzysie"
           REMOTE_PARENT="$(dirname "$SFTP_REMOTE_PATH")"
           REMOTE_DIR="$(basename "$SFTP_REMOTE_PATH")"
 
@@ -31,14 +32,16 @@ jobs:
           cd $REMOTE_PARENT
           -mkdir $REMOTE_DIR
           cd $REMOTE_DIR
-          put index.html
+          put landing-pages/$LANDING_SLUG/index.html index.html
+          put landing-pages/$LANDING_SLUG/theme.css theme.css
           -mkdir dziekuje
-          put dziekuje/index.html dziekuje/index.html
-          -mkdir images
-          put images/favicon.svg images/favicon.svg
-          put images/okladka-dodatek.png images/okladka-dodatek.png
-          put images/okladka-glowna.png images/okladka-glowna.png
-          put images/inwestowanie_page.png images/inwestowanie_page.png
-          put images/inwestowanie_page_dodatek.png images/inwestowanie_page_dodatek.png
+          put landing-pages/$LANDING_SLUG/dziekuje/index.html dziekuje/index.html
+          -mkdir assets
+          -mkdir assets/images
+          put landing-pages/$LANDING_SLUG/assets/images/favicon.svg assets/images/favicon.svg
+          put landing-pages/$LANDING_SLUG/assets/images/okladka-dodatek.png assets/images/okladka-dodatek.png
+          put landing-pages/$LANDING_SLUG/assets/images/okladka-glowna.png assets/images/okladka-glowna.png
+          put landing-pages/$LANDING_SLUG/assets/images/inwestowanie_page.png assets/images/inwestowanie_page.png
+          put landing-pages/$LANDING_SLUG/assets/images/inwestowanie_page_dodatek.png assets/images/inwestowanie_page_dodatek.png
           bye
           EOF

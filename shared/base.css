@@ -1,0 +1,56 @@
+:root {
+  --font-display: "Sora", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-page-bg: #020617;
+  --color-page-text: #ffffff;
+  --color-surface: rgba(15, 23, 42, 0.82);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-accent: #f97316;
+  --color-accent-strong: #ea580c;
+  --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.3);
+  --shadow-accent: 0 18px 44px rgba(249, 115, 22, 0.32);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-page-bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.12), transparent 24rem),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.1), transparent 28rem),
+    var(--color-page-bg);
+  color: var(--color-page-text);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.22);
+}
