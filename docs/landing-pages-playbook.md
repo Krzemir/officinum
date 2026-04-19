@@ -89,6 +89,36 @@ Repozytorium jest przygotowane pod wiele landingów dla różnych publikacji. Ka
 3. Jeśli repo pozostaje bez build stepu, landing ma być możliwie samowystarczalny przy publikacji.
 4. Jeśli liczba landingów wzrośnie, następnym krokiem powinno być dołożenie lekkiego generatora statycznego albo prostego etapu eksportu do katalogu `.dist/`.
 
+## Krytyczne zasady deployu
+
+1. Sam slug katalogu w `landing-pages/<slug>/` nie tworzy nowego URL-a na serwerze.
+2. O tym, pod jakim adresem będzie dostępny landing, decyduje katalog docelowy ustawiony w workflow deployu.
+3. Jeden produkcyjny URL = jeden osobny katalog docelowy na serwerze.
+4. Jeden katalog docelowy nie może być współdzielony przez dwa różne LP, bo kolejny deploy nadpisze poprzedni landing.
+5. Dla każdego nowego LP trzeba przygotować osobny workflow albo osobną, jednoznacznie odseparowaną ścieżkę docelową.
+6. Przed deployem trzeba jawnie odpowiedzieć na pytanie: "na jaki dokładnie URL ma wejść ten landing?".
+7. Jeśli odpowiedzią jest nowa ścieżka, np. `/biznes-bez-firmy/`, workflow musi tworzyć i uzupełniać właśnie ten katalog, a nie korzystać ze starego `SFTP_REMOTE_PATH` bez zmiany `REMOTE_DIR`.
+
+## Procedura deployu dla nowego LP
+
+1. Ustal dokładny adres publikacji, np. `/biznes-bez-firmy/`.
+2. Sprawdź, czy ten adres ma już własny workflow w `.github/workflows/`.
+3. Jeśli nie:
+   - skopiuj istniejący workflow deployu,
+   - ustaw właściwy `LANDING_SLUG`,
+   - ustaw osobny katalog docelowy, np. `REMOTE_DIR=\"biznes-bez-firmy\"`,
+   - upewnij się, że workflow wysyła pliki z właściwego katalogu `landing-pages/<slug>/`.
+4. Nie zmieniaj workflow starego LP tylko po to, żeby wdrożyć nowy landing.
+5. Stary workflow ma nadal publikować stary URL.
+6. Nowy workflow ma publikować wyłącznie nowy URL.
+7. Dopiero po tym wykonuj commit i push na `main`.
+
+## Aktualny stan repo
+
+- `deploy-sftp.yml` publikuje landing `inwestowanie-w-kryzysie`.
+- `deploy-biznes-bez-firmy.yml` publikuje landing `biznes-bez-firmy`.
+- Każdy z tych workflowów odpowiada za osobny adres i nie powinien być przepinany na inny LP.
+
 ## Workflow dla kolejnego agenta
 
 1. Sprawdź istniejące katalogi w `landing-pages/`.
@@ -105,7 +135,10 @@ Repozytorium jest przygotowane pod wiele landingów dla różnych publikacji. Ka
    - linki sprzedażowe
    - treść sekcji
 5. Upewnij się, że ścieżki są względne i nie odnoszą się do innego landingu.
-6. Dopiero po tym aktualizuj deploy dla nowej publikacji.
+6. Ustal docelowy URL przed deployem.
+7. Dodaj nowy workflow deployu albo nową ścieżkę docelową dla tej publikacji.
+8. Nie nadpisuj workflow istniejącego LP, jeśli nowy landing ma działać pod osobnym adresem.
+9. Dopiero po tym wykonuj deploy.
 
 ## Decyzje już wdrożone w tym repo
 
