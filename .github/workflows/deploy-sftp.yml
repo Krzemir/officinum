@@ -24,7 +24,7 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_REMOTE_PATH: ${{ secrets.SFTP_REMOTE_PATH }}
         run: |
-          LANDING_SLUG="inwestowanie-w-kryzysie"
+          LANDING_SLUG="biznes-bez-firmy"
           REMOTE_PARENT="$(dirname "$SFTP_REMOTE_PATH")"
           REMOTE_DIR="$(basename "$SFTP_REMOTE_PATH")"
 
@@ -39,9 +39,16 @@ jobs:
           -mkdir assets
           -mkdir assets/images
           put landing-pages/$LANDING_SLUG/assets/images/favicon.svg assets/images/favicon.svg
-          put landing-pages/$LANDING_SLUG/assets/images/okladka-dodatek.png assets/images/okladka-dodatek.png
-          put landing-pages/$LANDING_SLUG/assets/images/okladka-glowna.png assets/images/okladka-glowna.png
-          put landing-pages/$LANDING_SLUG/assets/images/inwestowanie_page.png assets/images/inwestowanie_page.png
-          put landing-pages/$LANDING_SLUG/assets/images/inwestowanie_page_dodatek.png assets/images/inwestowanie_page_dodatek.png
+          put landing-pages/$LANDING_SLUG/assets/images/biznes-bez-firmy-main.jpg assets/images/biznes-bez-firmy-main.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/biznes-bez-firmy-bonus-1.jpg assets/images/biznes-bez-firmy-bonus-1.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/biznes-bez-firmy-bonus-2.jpg assets/images/biznes-bez-firmy-bonus-2.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/problem.jpg assets/images/problem.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/rozwiazanie.jpg assets/images/rozwiazanie.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/dla\ kogo.jpg assets/images/dla\ kogo.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/hero.jpg assets/images/hero.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/addon2-group1-digital.jpg assets/images/addon2-group1-digital.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/addon2-group2-handmade.jpg assets/images/addon2-group2-handmade.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/addon2-group3-sewing.jpg assets/images/addon2-group3-sewing.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/addon2-group4-print.jpg assets/images/addon2-group4-print.jpg
           bye
           EOF
