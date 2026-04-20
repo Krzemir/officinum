@@ -25,6 +25,11 @@ body.lp-theme {
   font-family: var(--font-body);
 }
 
+.lp-theme main > section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1200px;
+}
+
 .lp-theme .lp-display {
   font-family: var(--font-display);
 }

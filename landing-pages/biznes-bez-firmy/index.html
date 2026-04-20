@@ -4,20 +4,6 @@
   class="scroll-smooth"
 >
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-5FPBJ3VJ');
-    </script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -45,6 +31,14 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/biznes-bez-firmy-main-720.webp"
+      imagesrcset="./assets/images/biznes-bez-firmy-main-720.webp 720w, ./assets/images/biznes-bez-firmy-main-1200.webp 1200w"
+      imagesizes="(max-width: 1023px) min(88vw, 33rem), 32rem"
+      fetchpriority="high"
     />
     <link
       rel="stylesheet"
@@ -150,6 +144,8 @@
                     <div class="rounded-[1.45rem] border border-[#2a2f36] bg-[#2a2f36] p-[5px]">
                       <img
                         src="./assets/images/biznes-bez-firmy-main.webp"
+                        srcset="./assets/images/biznes-bez-firmy-main-720.webp 720w, ./assets/images/biznes-bez-firmy-main-1200.webp 1200w"
+                        sizes="(max-width: 1023px) min(88vw, 33rem), 32rem"
                         alt="Okładka produktu głównego Biznes bez firmy"
                         width="2000"
                         height="3000"
@@ -167,10 +163,13 @@
                     <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
                       <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
-                          src="./assets/images/biznes-bez-firmy-bonus-1.webp"
+                          src="./assets/images/biznes-bez-firmy-bonus-1-420.webp"
+                          srcset="./assets/images/biznes-bez-firmy-bonus-1-420.webp 420w, ./assets/images/biznes-bez-firmy-bonus-1.webp 2000w"
+                          sizes="(max-width: 1023px) 38vw, 10rem"
                           alt="Okładka bonusu Działalność nierejestrowana"
                           width="2000"
                           height="3000"
+                          loading="lazy"
                           decoding="async"
                           class="block w-full rounded-[0.9rem]"
                         />
@@ -183,10 +182,13 @@
                     <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
                       <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
-                          src="./assets/images/biznes-bez-firmy-bonus-2.webp"
+                          src="./assets/images/biznes-bez-firmy-bonus-2-420.webp"
+                          srcset="./assets/images/biznes-bez-firmy-bonus-2-420.webp 420w, ./assets/images/biznes-bez-firmy-bonus-2.webp 2000w"
+                          sizes="(max-width: 1023px) 38vw, 10rem"
                           alt="Okładka bonusu 30 pomysłów na biznes"
                           width="2000"
                           height="3000"
+                          loading="lazy"
                           decoding="async"
                           class="block w-full rounded-[0.9rem]"
                         />
@@ -546,7 +548,9 @@
                         >
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_06.webp"
+                              src="./assets/images/preview-page-06-720.webp"
+                              srcset="./assets/images/preview-page-06-720.webp 720w, ./assets/images/Biznes bez firmy 1_Strona_06.webp 1200w"
+                              sizes="(max-width: 767px) 84vw, 36rem"
                               alt="Podgląd strony 6 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -558,7 +562,9 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_07.webp"
+                              src="./assets/images/preview-page-07-720.webp"
+                              srcset="./assets/images/preview-page-07-720.webp 720w, ./assets/images/Biznes bez firmy 1_Strona_07.webp 1200w"
+                              sizes="(max-width: 767px) 84vw, 36rem"
                               alt="Podgląd strony 7 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -571,7 +577,9 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_08.webp"
+                              src="./assets/images/preview-page-08-720.webp"
+                              srcset="./assets/images/preview-page-08-720.webp 720w, ./assets/images/Biznes bez firmy 1_Strona_08.webp 1200w"
+                              sizes="(max-width: 767px) 84vw, 36rem"
                               alt="Podgląd strony 8 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -584,7 +592,9 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_09.webp"
+                              src="./assets/images/preview-page-09-720.webp"
+                              srcset="./assets/images/preview-page-09-720.webp 720w, ./assets/images/Biznes bez firmy 1_Strona_09.webp 1200w"
+                              sizes="(max-width: 767px) 84vw, 36rem"
                               alt="Podgląd strony 9 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -597,7 +607,9 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_10.webp"
+                              src="./assets/images/preview-page-10-720.webp"
+                              srcset="./assets/images/preview-page-10-720.webp 720w, ./assets/images/Biznes bez firmy 1_Strona_10.webp 1200w"
+                              sizes="(max-width: 767px) 84vw, 36rem"
                               alt="Podgląd strony 10 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -610,7 +622,9 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_11.webp"
+                              src="./assets/images/preview-page-11-720.webp"
+                              srcset="./assets/images/preview-page-11-720.webp 720w, ./assets/images/Biznes bez firmy 1_Strona_11.webp 1200w"
+                              sizes="(max-width: 767px) 84vw, 36rem"
                               alt="Podgląd strony 11 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -627,12 +641,12 @@
                   </div>
 
                   <div class="mt-6 flex items-center justify-center gap-2" data-preview-dots>
-                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#b2643c]" aria-label="Strona 1"></button>
-                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 2"></button>
-                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 3"></button>
-                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 4"></button>
-                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 5"></button>
-                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 6"></button>
+                    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Strona 1"><span class="h-3.5 w-3.5 rounded-full bg-[#b2643c]"></span></button>
+                    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Strona 2"><span class="h-3.5 w-3.5 rounded-full bg-[#dcc7b8]"></span></button>
+                    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Strona 3"><span class="h-3.5 w-3.5 rounded-full bg-[#dcc7b8]"></span></button>
+                    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Strona 4"><span class="h-3.5 w-3.5 rounded-full bg-[#dcc7b8]"></span></button>
+                    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Strona 5"><span class="h-3.5 w-3.5 rounded-full bg-[#dcc7b8]"></span></button>
+                    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Strona 6"><span class="h-3.5 w-3.5 rounded-full bg-[#dcc7b8]"></span></button>
                   </div>
                 </div>
               </div>
@@ -1512,7 +1526,7 @@
             <div class="w-fit max-w-full rounded-[2rem] border border-white/10 bg-[#edf1f5] p-[8px] shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
               <div class="w-fit max-w-full rounded-[1.7rem] border border-[#2a2f36] bg-[#2a2f36] p-[6px]">
                 <img
-                  src="./assets/images/Biznes bez firmy 1_Strona_06.webp"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                   alt="Powiększony podgląd strony ebooka Biznes bez firmy"
                   width="1200"
                   height="1800"
@@ -1525,17 +1539,52 @@
           </div>
 
           <div class="mt-5 flex items-center justify-center gap-2" data-lightbox-dots>
-            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 1"><span class="h-2.5 w-2.5 rounded-full bg-[#b2643c]"></span></button>
-            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 2"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
-            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 3"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
-            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 4"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
-            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 5"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
-            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 6"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Powiększona strona 1"><span class="h-3.5 w-3.5 rounded-full bg-[#b2643c]"></span></button>
+            <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Powiększona strona 2"><span class="h-3.5 w-3.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Powiększona strona 3"><span class="h-3.5 w-3.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Powiększona strona 4"><span class="h-3.5 w-3.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Powiększona strona 5"><span class="h-3.5 w-3.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full" aria-label="Powiększona strona 6"><span class="h-3.5 w-3.5 rounded-full bg-white/35"></span></button>
           </div>
         </div>
       </div>
     </div>
     <script>
+      (() => {
+        const gtmId = 'GTM-5FPBJ3VJ';
+        let loaded = false;
+
+        const loadGtm = () => {
+          if (loaded) return;
+          loaded = true;
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+          document.head.appendChild(script);
+        };
+
+        const queueLoad = () => {
+          if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadGtm, { timeout: 3500 });
+          } else {
+            window.setTimeout(loadGtm, 2500);
+          }
+        };
+
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((eventName) => {
+          window.addEventListener(eventName, loadGtm, { once: true, passive: true });
+        });
+
+        if (document.readyState === 'complete') {
+          queueLoad();
+        } else {
+          window.addEventListener('load', queueLoad, { once: true });
+        }
+      })();
+
       const bonusCountdown = document.querySelector('[data-bonus-countdown]');
 
       if (bonusCountdown) {
@@ -1632,13 +1681,15 @@
           const activeImage = slides[currentIndex]?.querySelector('img');
           if (!activeImage) return;
 
-          lightboxImage.src = activeImage.src;
+          lightboxImage.src = activeImage.currentSrc || activeImage.src;
           lightboxImage.alt = activeImage.alt;
           lightboxCurrent.textContent = String(currentIndex + 1);
 
           lightboxDots.forEach((dot, index) => {
-            dot.classList.toggle('bg-[#b2643c]', index === currentIndex);
-            dot.classList.toggle('bg-white/35', index !== currentIndex);
+            const indicator = dot.querySelector('span');
+            if (!indicator) return;
+            indicator.classList.toggle('bg-[#b2643c]', index === currentIndex);
+            indicator.classList.toggle('bg-white/35', index !== currentIndex);
           });
         };
 
@@ -1647,8 +1698,10 @@
           currentLabel.textContent = String(currentIndex + 1);
 
           dots.forEach((dot, index) => {
-            dot.classList.toggle('bg-[#b2643c]', index === currentIndex);
-            dot.classList.toggle('bg-[#dcc7b8]', index !== currentIndex);
+            const indicator = dot.querySelector('span');
+            if (!indicator) return;
+            indicator.classList.toggle('bg-[#b2643c]', index === currentIndex);
+            indicator.classList.toggle('bg-[#dcc7b8]', index !== currentIndex);
           });
 
           syncLightbox();
