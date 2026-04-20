@@ -143,6 +143,8 @@
               <div class="mt-6">
                 <a
                   href="https://easl.ink/LA4QE"
+                  data-cta-click
+                  data-cta-location="hero"
                   class="lp-hover-button inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[16rem]"
                 >
                   Kup teraz
@@ -1248,6 +1250,8 @@
 
                 <a
                   href="https://easl.ink/LA4QE"
+                  data-cta-click
+                  data-cta-location="pricing"
                   class="lp-hover-button mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[18rem]"
                 >
                   Kup teraz
@@ -1427,6 +1431,8 @@
 
             <a
               href="https://easl.ink/LA4QE"
+              data-cta-click
+              data-cta-location="final_cta"
               class="lp-hover-button mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-white/15 sm:w-auto sm:min-w-[18rem]"
             >
               Kup teraz
@@ -1555,6 +1561,23 @@
       </div>
     </div>
     <script>
+      window.dataLayer = window.dataLayer || [];
+
+      const pushDataLayerEvent = (payload) => {
+        window.dataLayer.push(payload);
+      };
+
+      const ctaButtons = document.querySelectorAll('[data-cta-click]');
+      ctaButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          pushDataLayerEvent({
+            event: 'purchase_cta_click',
+            product_slug: 'biznes-bez-firmy',
+            cta_location: button.dataset.ctaLocation || 'unknown',
+          });
+        });
+      });
+
       const bonusCountdown = document.querySelector('[data-bonus-countdown]');
 
       if (bonusCountdown) {
@@ -1676,6 +1699,12 @@
         const openLightbox = (index) => {
           currentIndex = index;
           renderPreviewSlide();
+          pushDataLayerEvent({
+            event: 'ebook_preview_open',
+            product_slug: 'biznes-bez-firmy',
+            preview_section: 'content_overview',
+            preview_page: currentIndex + 1,
+          });
           if (!lightbox) return;
           lightbox.classList.remove('pointer-events-none', 'opacity-0');
           lightbox.setAttribute('aria-hidden', 'false');
