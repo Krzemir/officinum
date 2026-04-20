@@ -34,6 +34,7 @@ jobs:
           cd $REMOTE_DIR
           put landing-pages/$LANDING_SLUG/index.html index.html
           put landing-pages/$LANDING_SLUG/theme.css theme.css
+          put landing-pages/$LANDING_SLUG/tailwind.output.css tailwind.output.css
           -mkdir dziekuje
           put landing-pages/$LANDING_SLUG/dziekuje/index.html dziekuje/index.html
           -mkdir assets
@@ -67,5 +68,11 @@ jobs:
           put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_09.jpg assets/images/Biznes\ bez\ firmy\ 1_Strona_09.jpg
           put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_10.jpg assets/images/Biznes\ bez\ firmy\ 1_Strona_10.jpg
           put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_11.jpg assets/images/Biznes\ bez\ firmy\ 1_Strona_11.jpg
+          put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_06.webp assets/images/Biznes\ bez\ firmy\ 1_Strona_06.webp
+          put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_07.webp assets/images/Biznes\ bez\ firmy\ 1_Strona_07.webp
+          put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_08.webp assets/images/Biznes\ bez\ firmy\ 1_Strona_08.webp
+          put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_09.webp assets/images/Biznes\ bez\ firmy\ 1_Strona_09.webp
+          put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_10.webp assets/images/Biznes\ bez\ firmy\ 1_Strona_10.webp
+          put landing-pages/$LANDING_SLUG/assets/images/Biznes\ bez\ firmy\ 1_Strona_11.webp assets/images/Biznes\ bez\ firmy\ 1_Strona_11.webp
           bye
           EOF

@@ -1,0 +1,10 @@
+{
+  "name": "inwestowanie-landing-pages",
+  "private": true,
+  "scripts": {
+    "build:biznes-bez-firmy-css": "tailwindcss -c tailwind.biznes-bez-firmy.config.js -i ./landing-pages/biznes-bez-firmy/tailwind.input.css -o ./landing-pages/biznes-bez-firmy/tailwind.output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

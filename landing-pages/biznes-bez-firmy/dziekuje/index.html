@@ -46,27 +46,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="../tailwind.output.css"
+    />
     <link
       rel="stylesheet"
       href="../theme.css"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['var(--font-body)', 'sans-serif'],
-              display: ['var(--font-display)', 'serif'],
-            },
-            boxShadow: {
-              soft: '0 24px 60px rgba(96, 70, 50, 0.12)',
-              card: '0 28px 70px rgba(79, 57, 39, 0.14)',
-            },
-          },
-        },
-      };
-    </script>
   </head>
   <body class="lp-theme font-sans text-stone-900 antialiased">
     <!-- Google Tag Manager (noscript) -->
@@ -201,13 +188,5 @@
         </div>
       </section>
     </main>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'thank_you_view',
-        product_slug: 'biznes-bez-firmy',
-        page_type: 'thank_you',
-      });
-    </script>
   </body>
 </html>

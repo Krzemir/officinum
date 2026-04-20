@@ -46,33 +46,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="./tailwind.output.css"
+    />
     <link
       rel="stylesheet"
       href="./theme.css"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['var(--font-body)', 'sans-serif'],
-              display: ['var(--font-display)', 'serif'],
-            },
-            colors: {
-              sand: '#f6efe7',
-              ink: '#35271f',
-              clay: '#b2643c',
-              mist: '#e7dbce',
-            },
-            boxShadow: {
-              soft: '0 24px 60px rgba(96, 70, 50, 0.12)',
-              card: '0 28px 70px rgba(79, 57, 39, 0.14)',
-            },
-          },
-        },
-      };
-    </script>
   </head>
   <body class="lp-theme font-sans text-stone-900 antialiased">
     <!-- Google Tag Manager (noscript) -->
@@ -143,8 +124,6 @@
               <div class="mt-6">
                 <a
                   href="https://easl.ink/LA4QE"
-                  data-cta-click
-                  data-cta-location="hero"
                   class="lp-hover-button inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[16rem]"
                 >
                   Kup teraz
@@ -170,7 +149,7 @@
                   <div class="lp-hover-mockup rounded-[1.8rem] border border-[#d5dae1] bg-[#edf1f5] p-[8px] shadow-card">
                     <div class="rounded-[1.45rem] border border-[#2a2f36] bg-[#2a2f36] p-[5px]">
                       <img
-                        src="./assets/images/biznes-bez-firmy-main.jpg"
+                        src="./assets/images/biznes-bez-firmy-main.webp"
                         alt="Okładka produktu głównego Biznes bez firmy"
                         width="2000"
                         height="3000"
@@ -188,7 +167,7 @@
                     <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
                       <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
-                          src="./assets/images/biznes-bez-firmy-bonus-1.jpg"
+                          src="./assets/images/biznes-bez-firmy-bonus-1.webp"
                           alt="Okładka bonusu Działalność nierejestrowana"
                           width="2000"
                           height="3000"
@@ -204,7 +183,7 @@
                     <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
                       <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
-                          src="./assets/images/biznes-bez-firmy-bonus-2.jpg"
+                          src="./assets/images/biznes-bez-firmy-bonus-2.webp"
                           alt="Okładka bonusu 30 pomysłów na biznes"
                           width="2000"
                           height="3000"
@@ -567,7 +546,7 @@
                         >
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_06.jpg"
+                              src="./assets/images/Biznes bez firmy 1_Strona_06.webp"
                               alt="Podgląd strony 6 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -579,7 +558,7 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_07.jpg"
+                              src="./assets/images/Biznes bez firmy 1_Strona_07.webp"
                               alt="Podgląd strony 7 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -592,7 +571,7 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_08.jpg"
+                              src="./assets/images/Biznes bez firmy 1_Strona_08.webp"
                               alt="Podgląd strony 8 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -605,7 +584,7 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_09.jpg"
+                              src="./assets/images/Biznes bez firmy 1_Strona_09.webp"
                               alt="Podgląd strony 9 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -618,7 +597,7 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_10.jpg"
+                              src="./assets/images/Biznes bez firmy 1_Strona_10.webp"
                               alt="Podgląd strony 10 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -631,7 +610,7 @@
                           </figure>
                           <figure class="w-full shrink-0 cursor-zoom-in p-0">
                             <img
-                              src="./assets/images/Biznes bez firmy 1_Strona_11.jpg"
+                              src="./assets/images/Biznes bez firmy 1_Strona_11.webp"
                               alt="Podgląd strony 11 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
@@ -747,7 +726,7 @@
                 <div class="lp-hover-mockup rounded-[1.6rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
                   <div class="rounded-[1.25rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                     <img
-                      src="./assets/images/biznes-bez-firmy-bonus-2.jpg"
+                      src="./assets/images/biznes-bez-firmy-bonus-2.webp"
                       alt="Okładka bonusu 30 pomysłów na biznes bez firmy"
                       width="2000"
                       height="3000"
@@ -971,7 +950,7 @@
                   <div class="lp-hover-mockup rounded-[1.7rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
                     <div class="rounded-[1.3rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                       <img
-                        src="./assets/images/biznes-bez-firmy-bonus-1.jpg"
+                        src="./assets/images/biznes-bez-firmy-bonus-1.webp"
                         alt="Okładka bonusu Ściągawka przedsiębiorcy"
                         width="2000"
                         height="3000"
@@ -1250,8 +1229,6 @@
 
                 <a
                   href="https://easl.ink/LA4QE"
-                  data-cta-click
-                  data-cta-location="pricing"
                   class="lp-hover-button mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[18rem]"
                 >
                   Kup teraz
@@ -1431,8 +1408,6 @@
 
             <a
               href="https://easl.ink/LA4QE"
-              data-cta-click
-              data-cta-location="final_cta"
               class="lp-hover-button mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-white/15 sm:w-auto sm:min-w-[18rem]"
             >
               Kup teraz
@@ -1537,7 +1512,7 @@
             <div class="w-fit max-w-full rounded-[2rem] border border-white/10 bg-[#edf1f5] p-[8px] shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
               <div class="w-fit max-w-full rounded-[1.7rem] border border-[#2a2f36] bg-[#2a2f36] p-[6px]">
                 <img
-                  src="./assets/images/Biznes bez firmy 1_Strona_06.jpg"
+                  src="./assets/images/Biznes bez firmy 1_Strona_06.webp"
                   alt="Powiększony podgląd strony ebooka Biznes bez firmy"
                   width="1200"
                   height="1800"
@@ -1550,34 +1525,17 @@
           </div>
 
           <div class="mt-5 flex items-center justify-center gap-2" data-lightbox-dots>
-            <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#b2643c]" aria-label="Powiększona strona 1"></button>
-            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 2"></button>
-            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 3"></button>
-            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 4"></button>
-            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 5"></button>
-            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 6"></button>
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 1"><span class="h-2.5 w-2.5 rounded-full bg-[#b2643c]"></span></button>
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 2"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 3"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 4"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 5"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full" aria-label="Powiększona strona 6"><span class="h-2.5 w-2.5 rounded-full bg-white/35"></span></button>
           </div>
         </div>
       </div>
     </div>
     <script>
-      window.dataLayer = window.dataLayer || [];
-
-      const pushDataLayerEvent = (payload) => {
-        window.dataLayer.push(payload);
-      };
-
-      const ctaButtons = document.querySelectorAll('[data-cta-click]');
-      ctaButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          pushDataLayerEvent({
-            event: 'purchase_cta_click',
-            product_slug: 'biznes-bez-firmy',
-            cta_location: button.dataset.ctaLocation || 'unknown',
-          });
-        });
-      });
-
       const bonusCountdown = document.querySelector('[data-bonus-countdown]');
 
       if (bonusCountdown) {
@@ -1699,12 +1657,6 @@
         const openLightbox = (index) => {
           currentIndex = index;
           renderPreviewSlide();
-          pushDataLayerEvent({
-            event: 'ebook_preview_open',
-            product_slug: 'biznes-bez-firmy',
-            preview_section: 'content_overview',
-            preview_page: currentIndex + 1,
-          });
           if (!lightbox) return;
           lightbox.classList.remove('pointer-events-none', 'opacity-0');
           lightbox.setAttribute('aria-hidden', 'false');
