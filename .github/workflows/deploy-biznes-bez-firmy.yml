@@ -30,6 +30,7 @@ jobs:
 
           sshpass -p "$SFTP_PASSWORD" sftp -oBatchMode=no -oStrictHostKeyChecking=no -P "$SFTP_PORT" "$SFTP_USERNAME@$SFTP_HOST" <<EOF
           cd $REMOTE_PARENT
+          put index.html index.html
           -mkdir $REMOTE_DIR
           cd $REMOTE_DIR
           put landing-pages/$LANDING_SLUG/.htaccess .htaccess
