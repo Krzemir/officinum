@@ -31,6 +31,10 @@ jobs:
           sshpass -p "$SFTP_PASSWORD" sftp -oBatchMode=no -oStrictHostKeyChecking=no -P "$SFTP_PORT" "$SFTP_USERNAME@$SFTP_HOST" <<EOF
           cd $REMOTE_PARENT
           put index.html index.html
+          -mkdir assets
+          -mkdir assets/logo
+          put assets/logo/logo\ officinum.svg assets/logo/logo\ officinum.svg
+          put assets/logo/favicon-officinum.png assets/logo/favicon-officinum.png
           -mkdir $REMOTE_DIR
           cd $REMOTE_DIR
           put landing-pages/$LANDING_SLUG/.htaccess .htaccess

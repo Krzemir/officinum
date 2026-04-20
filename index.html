@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="pl">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5FPBJ3VJ');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -9,12 +23,16 @@
     <title>Officinum | Nasze ebooki</title>
     <meta
       name="description"
-      content="Poznaj ebooki Officinum i przejdź do wybranego produktu."
+      content="Wybierz ebook Officinum i przejdź od razu do interesującej Cię publikacji."
     />
     <link
       rel="icon"
-      type="image/svg+xml"
-      href="./landing-pages/inwestowanie-w-kryzysie/assets/images/favicon.svg"
+      type="image/png"
+      href="./assets/logo/favicon-officinum.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/logo/favicon-officinum.png"
     />
     <style>
       :root {
@@ -84,36 +102,26 @@
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 14px;
       }
 
       .brand-mark {
-        width: 52px;
-        height: 52px;
-        flex: 0 0 52px;
-        border-radius: 14px;
-        background: #0f172a;
-        box-shadow: 0 16px 30px rgba(15, 23, 42, 0.14);
+        display: block;
+        width: min(100%, 320px);
+        height: auto;
       }
 
       .brand-copy {
         display: flex;
         flex-direction: column;
-        gap: 2px;
-      }
-
-      .brand-name {
-        font-family: var(--display);
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: 0.02em;
+        gap: 6px;
       }
 
       .brand-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.82rem;
         color: var(--muted);
-        letter-spacing: 0.08em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
+        padding-left: 6px;
       }
 
       .intro {
@@ -141,6 +149,45 @@
         display: grid;
         gap: 22px;
         margin-top: 34px;
+      }
+
+      .site-footer {
+        margin-top: 22px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: rgba(88, 56, 40, 0.94);
+        color: rgba(255, 248, 242, 0.78);
+        box-shadow: 0 18px 40px rgba(60, 33, 19, 0.12);
+        padding: 28px 20px;
+        text-align: center;
+      }
+
+      .site-footer p {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.8;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 34px;
+        margin-top: 22px;
+        font-size: 0.92rem;
+      }
+
+      .footer-links a,
+      .footer-links span,
+      .footer-links i {
+        color: inherit;
+        text-decoration: none;
+        font-style: normal;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus-visible {
+        color: #fffdf9;
       }
 
       .ebook-card {
@@ -257,16 +304,25 @@
     </style>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5FPBJ3VJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <main class="shell">
       <section class="hero">
         <div class="brand">
-          <img
-            class="brand-mark"
-            src="./landing-pages/inwestowanie-w-kryzysie/assets/images/favicon.svg"
-            alt="Officinum"
-          />
           <div class="brand-copy">
-            <span class="brand-name">Officinum</span>
+            <img
+              class="brand-mark"
+              src="./assets/logo/logo officinum.svg"
+              alt="Officinum"
+            />
             <span class="brand-subtitle">Biblioteka ebooków</span>
           </div>
         </div>
@@ -274,7 +330,7 @@
         <div class="intro">
           <h1>Nasze ebooki</h1>
           <p class="lead">
-            Wybierz publikację, która najlepiej pasuje do Twojego celu. Każda okładka prowadzi bezpośrednio do strony ebooka.
+            Dwie publikacje, dwa konkretne cele. Wybierz temat, który jest Ci teraz najbliższy, i przejdź od razu do pełnej oferty.
           </p>
         </div>
 
@@ -294,9 +350,9 @@
               <span class="eyebrow">Ebook 01</span>
               <h2 class="card-title">Inwestowanie w kryzysie</h2>
               <p class="card-text">
-                Praktyczne podstawy inwestowania i materiał dla osób, które chcą lepiej poruszać się w trudniejszych realiach rynkowych.
+                Dla osób, które chcą lepiej rozumieć rynek, spokojniej podejmować decyzje i budować solidne podstawy inwestowania.
               </p>
-              <span class="cta">Zobacz ebook</span>
+              <span class="cta">Przejdź do ebooka</span>
             </div>
           </a>
 
@@ -315,13 +371,24 @@
               <span class="eyebrow">Ebook 02</span>
               <h2 class="card-title">Biznes bez firmy</h2>
               <p class="card-text">
-                Kompaktowy przewodnik po działalności nierejestrowanej dla osób, które chcą legalnie zacząć sprzedawać bez zakładania firmy.
+                Dla osób, które chcą zacząć sprzedawać legalnie, prosto i bez zbędnego chaosu związanego z zakładaniem działalności.
               </p>
-              <span class="cta">Zobacz ebook</span>
+              <span class="cta">Przejdź do ebooka</span>
             </div>
           </a>
         </div>
       </section>
+
+      <footer class="site-footer">
+        <p>Materiał ma charakter wyłącznie edukacyjny i nie stanowi indywidualnej porady inwestycyjnej.</p>
+        <div class="footer-links">
+          <a href="https://easl.ink/xePGa">Regulamin</a>
+          <i aria-hidden="true">•</i>
+          <a href="https://easl.ink/64liX">Polityka prywatności</a>
+          <i aria-hidden="true">•</i>
+          <span>Copyright 2026</span>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
