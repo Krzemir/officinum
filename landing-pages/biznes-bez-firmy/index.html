@@ -92,7 +92,25 @@
 
         <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-6 py-16 sm:px-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:px-12 lg:py-20">
           <div class="max-w-2xl">
-            <div class="inline-flex items-center rounded-full border border-[#cfb6a0] bg-white/75 px-4 py-2 text-sm font-semibold tracking-[0.08em] text-[#8e5234] shadow-soft backdrop-blur">Aktualne na 2026 r.</div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-[#d0a588] bg-[linear-gradient(180deg,_#fff4ea_0%,_#f5dfcf_100%)] px-5 py-2.5 text-sm font-extrabold tracking-[0.08em] text-[#8f4f2f] shadow-[0_18px_36px_rgba(178,100,60,0.18)] backdrop-blur">
+              <span class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#d7b29a] bg-white/80 text-[#a15b38] shadow-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 3.75v3M15.75 3.75v3M4.5 8.25h15M6.75 5.25h10.5A2.25 2.25 0 0119.5 7.5v9.75a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 17.25V7.5a2.25 2.25 0 012.25-2.25z"
+                  />
+                </svg>
+              </span>
+              <span>Aktualne na 2026 r.</span>
+            </div>
 
             <h1 class="mt-8 max-w-xl font-display text-5xl leading-[0.95] tracking-[-0.04em] text-[#35271f] sm:text-6xl lg:text-7xl">Biznes bez firmy</h1>
 
@@ -664,9 +682,61 @@
                   </p>
                 </div>
 
-                <div class="lp-hover-card max-w-md rounded-[1.4rem] border border-[#e8cbb5] bg-[#fff7f0] px-5 py-4 text-left shadow-soft">
-                  <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#9a5a39]">Oferta tylko do niedzieli</p>
-                  <p class="mt-2 text-sm leading-6 text-[#6a5346]">Po tym terminie bonus wraca do regularnej ceny.</p>
+                <div
+                  class="lp-hover-card max-w-lg rounded-[1.5rem] border border-[#e8cbb5] bg-[#fff7f0] px-5 py-5 text-left shadow-soft"
+                  data-bonus-countdown
+                >
+                  <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#9a5a39]">Bonus gratis tylko do końca niedzieli</p>
+                  <p
+                    class="mt-2 text-sm leading-6 text-[#6a5346]"
+                    data-bonus-deadline-label
+                  >
+                    W tej edycji promocja kończy się w niedzielę, 26 kwietnia 2026, o 23:59.
+                  </p>
+
+                  <div class="mt-4 grid grid-cols-2 gap-3 sm:max-w-md sm:grid-cols-4">
+                    <div class="rounded-[1.1rem] border border-[#ecd7c8] bg-white px-3 py-3 text-center">
+                      <p
+                        class="text-2xl font-extrabold leading-none text-[#35271f]"
+                        data-bonus-days
+                      >
+                        00
+                      </p>
+                      <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a16242]">dni</p>
+                    </div>
+                    <div class="rounded-[1.1rem] border border-[#ecd7c8] bg-white px-3 py-3 text-center">
+                      <p
+                        class="text-2xl font-extrabold leading-none text-[#35271f]"
+                        data-bonus-hours
+                      >
+                        00
+                      </p>
+                      <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a16242]">godz.</p>
+                    </div>
+                    <div class="rounded-[1.1rem] border border-[#ecd7c8] bg-white px-3 py-3 text-center">
+                      <p
+                        class="text-2xl font-extrabold leading-none text-[#35271f]"
+                        data-bonus-minutes
+                      >
+                        00
+                      </p>
+                      <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a16242]">min.</p>
+                    </div>
+                    <div class="rounded-[1.1rem] border border-[#ecd7c8] bg-white px-3 py-3 text-center">
+                      <p
+                        class="text-2xl font-extrabold leading-none text-[#35271f]"
+                        data-bonus-seconds
+                      >
+                        00
+                      </p>
+                      <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a16242]">sek.</p>
+                    </div>
+                  </div>
+
+                  <p class="mt-4 text-sm leading-6 text-[#6a5346]">
+                    Po zakończeniu promocji bonus wraca do regularnej ceny
+                    <span class="font-semibold text-[#9a5a39]">39,90 zł</span>.
+                  </p>
                 </div>
               </div>
 
@@ -1485,6 +1555,70 @@
       </div>
     </div>
     <script>
+      const bonusCountdown = document.querySelector('[data-bonus-countdown]');
+
+      if (bonusCountdown) {
+        const daysEl = bonusCountdown.querySelector('[data-bonus-days]');
+        const hoursEl = bonusCountdown.querySelector('[data-bonus-hours]');
+        const minutesEl = bonusCountdown.querySelector('[data-bonus-minutes]');
+        const secondsEl = bonusCountdown.querySelector('[data-bonus-seconds]');
+        const deadlineLabel = bonusCountdown.querySelector('[data-bonus-deadline-label]');
+
+        const getNextSundayDeadline = () => {
+          const now = new Date();
+          const deadline = new Date(now);
+          const daysUntilSunday = (7 - now.getDay()) % 7;
+
+          deadline.setDate(now.getDate() + daysUntilSunday);
+          deadline.setHours(23, 59, 59, 999);
+
+          if (deadline <= now) {
+            deadline.setDate(deadline.getDate() + 7);
+          }
+
+          return deadline;
+        };
+
+        let deadline = getNextSundayDeadline();
+
+        const updateBonusCountdown = () => {
+          const now = new Date();
+
+          if (now >= deadline) {
+            deadline = getNextSundayDeadline();
+          }
+
+          const diff = deadline.getTime() - now.getTime();
+          const totalMinutes = Math.max(0, Math.floor(diff / 60000));
+          const totalSeconds = Math.max(0, Math.floor(diff / 1000));
+          const days = Math.floor(totalMinutes / (60 * 24));
+          const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+          const minutes = totalMinutes % 60;
+          const seconds = totalSeconds % 60;
+
+          daysEl.textContent = String(days).padStart(2, '0');
+          hoursEl.textContent = String(hours).padStart(2, '0');
+          minutesEl.textContent = String(minutes).padStart(2, '0');
+          if (secondsEl) {
+            secondsEl.textContent = String(seconds).padStart(2, '0');
+          }
+
+          if (deadlineLabel) {
+            const formattedDate = new Intl.DateTimeFormat('pl-PL', {
+              weekday: 'long',
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+            }).format(deadline);
+
+            deadlineLabel.textContent = `W tej edycji promocja kończy się ${formattedDate} o 23:59.`;
+          }
+        };
+
+        updateBonusCountdown();
+        setInterval(updateBonusCountdown, 1000);
+      }
+
       const previewSlider = document.querySelector('[data-preview-slider]');
 
       if (previewSlider) {
