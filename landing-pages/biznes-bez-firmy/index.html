@@ -115,7 +115,7 @@
 
             <p class="mt-6 max-w-xl text-lg leading-8 text-[#5d4b40] sm:text-xl">Jak legalnie zarabiać, testować pomysły i budować dochód bez zakładania działalności gospodarczej.</p>
 
-            <div class="mt-10 rounded-[2rem] border border-[#dfcabc] bg-white/85 p-6 shadow-card backdrop-blur sm:p-7">
+            <div class="lp-hover-card mt-10 rounded-[2rem] border border-[#dfcabc] bg-white/85 p-6 shadow-card backdrop-blur sm:p-7">
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#9a5a39]">Cena</p>
               <div class="mt-3 flex items-end gap-3">
                 <p class="text-2xl font-semibold leading-none text-[#9b8778] line-through sm:text-3xl">59,90 zł</p>
@@ -125,7 +125,7 @@
               <div class="mt-6">
                 <a
                   href="https://easl.ink/LA4QE"
-                  class="inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[16rem]"
+                  class="lp-hover-button inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[16rem]"
                 >
                   Kup teraz
                 </a>
@@ -147,11 +147,15 @@
 
               <div class="relative grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_10rem]">
                 <figure class="mx-auto w-full max-w-[33rem] lg:max-w-none">
-                  <div class="rounded-[1.8rem] border border-[#d5dae1] bg-[#edf1f5] p-[8px] shadow-card">
+                  <div class="lp-hover-mockup rounded-[1.8rem] border border-[#d5dae1] bg-[#edf1f5] p-[8px] shadow-card">
                     <div class="rounded-[1.45rem] border border-[#2a2f36] bg-[#2a2f36] p-[5px]">
                       <img
                         src="./assets/images/biznes-bez-firmy-main.jpg"
                         alt="Okładka produktu głównego Biznes bez firmy"
+                        width="2000"
+                        height="3000"
+                        fetchpriority="high"
+                        decoding="async"
                         class="block w-full rounded-[1.15rem]"
                       />
                     </div>
@@ -161,11 +165,14 @@
                 <div class="flex flex-col gap-5 pt-8 lg:pt-12">
                   <figure class="relative pt-4">
                     <span class="absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[-4deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft"> Bonus 1 </span>
-                    <div class="rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
+                    <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
                       <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
                           src="./assets/images/biznes-bez-firmy-bonus-1.jpg"
                           alt="Okładka bonusu Działalność nierejestrowana"
+                          width="2000"
+                          height="3000"
+                          decoding="async"
                           class="block w-full rounded-[0.9rem]"
                         />
                       </div>
@@ -174,11 +181,14 @@
 
                   <figure class="relative pt-4">
                     <span class="absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[3deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft"> Bonus 2 </span>
-                    <div class="rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
+                    <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
                       <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
                           src="./assets/images/biznes-bez-firmy-bonus-2.jpg"
                           alt="Okładka bonusu 30 pomysłów na biznes"
+                          width="2000"
+                          height="3000"
+                          decoding="async"
                           class="block w-full rounded-[0.9rem]"
                         />
                       </div>
@@ -202,8 +212,12 @@
             <div class="rounded-[2rem] border border-[#eadccf] bg-white/90 p-5 shadow-card sm:p-6">
               <div class="overflow-hidden rounded-[1.6rem] border border-[#f0e4d8] bg-[#fffaf6]">
                 <img
-                  src="./assets/images/problem.jpg"
+                  src="./assets/images/problem.webp"
                   alt="Ilustracja problemów związanych z formalnościami przy działalności nierejestrowanej"
+                  width="2528"
+                  height="1696"
+                  loading="lazy"
+                  decoding="async"
                   class="block w-full"
                 />
               </div>
@@ -217,28 +231,28 @@
             <p class="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-[#a16242]">Najczęstsze obawy na starcie:</p>
 
             <div class="mt-8 space-y-4">
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">01</span>
                 <p class="text-base leading-7 text-[#4b382e]">Nie wiesz, czy możesz zarabiać bez firmy</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">02</span>
                 <p class="text-base leading-7 text-[#4b382e]">Obawiasz się ZUS i kosztów zanim zarobisz pierwszą złotówkę</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">03</span>
                 <p class="text-base leading-7 text-[#4b382e]">Nie masz pewności, gdzie kończy się sprzedaż prywatna</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">04</span>
                 <p class="text-base leading-7 text-[#4b382e]">Boisz się przekroczyć limit i mieć problemy</p>
               </div>
             </div>
 
-            <div class="mt-8 rounded-[1.8rem] border border-[#dfcabc] bg-[#fff7f0] px-6 py-6 shadow-soft">
+            <div class="lp-hover-card mt-8 rounded-[1.8rem] border border-[#dfcabc] bg-[#fff7f0] px-6 py-6 shadow-soft">
               <p class="text-lg leading-8 text-[#4b382e]">
                 Większość osób nie rezygnuje z biznesu przez brak pomysłu.
                 <br />
@@ -262,27 +276,27 @@
             </p>
 
             <div class="mt-8 space-y-4">
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f2e1d4] text-[#a16242]">✓</span>
                 <p class="text-base leading-7 text-[#4b382e]">ile możesz zarobić bez zakładania firmy</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f2e1d4] text-[#a16242]">✓</span>
                 <p class="text-base leading-7 text-[#4b382e]">jakie limity obowiązują w 2026 roku</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f2e1d4] text-[#a16242]">✓</span>
                 <p class="text-base leading-7 text-[#4b382e]">kiedy pojawia się obowiązek ZUS</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f2e1d4] text-[#a16242]">✓</span>
                 <p class="text-base leading-7 text-[#4b382e]">kiedy potrzebna jest kasa fiskalna</p>
               </div>
 
-              <div class="flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
+              <div class="lp-hover-card flex items-start gap-4 rounded-[1.4rem] border border-[#eadccf] bg-white px-5 py-5 shadow-soft">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f2e1d4] text-[#a16242]">✓</span>
                 <p class="text-base leading-7 text-[#4b382e]">kiedy musisz założyć działalność gospodarczą</p>
               </div>
@@ -296,8 +310,12 @@
             <div class="rounded-[2rem] border border-[#e2d2c5] bg-white/90 p-5 shadow-card sm:p-6">
               <div class="overflow-hidden rounded-[1.6rem] border border-[#efe1d5] bg-[#fffaf6]">
                 <img
-                  src="./assets/images/rozwiazanie.jpg"
+                  src="./assets/images/rozwiazanie.webp"
                   alt="Ilustracja pokazująca uporządkowane rozwiązanie i praktyczny przewodnik"
+                  width="2528"
+                  height="1696"
+                  loading="lazy"
+                  decoding="async"
                   class="block w-full"
                 />
               </div>
@@ -316,7 +334,7 @@
           </div>
 
           <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <article class="rounded-[1.8rem] border border-[#e5d6ca] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.8rem] border border-[#e5d6ca] bg-white p-6 shadow-soft sm:p-7">
               <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -356,7 +374,7 @@
               </ul>
             </article>
 
-            <article class="rounded-[1.8rem] border border-[#e5d6ca] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.8rem] border border-[#e5d6ca] bg-white p-6 shadow-soft sm:p-7">
               <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -396,7 +414,7 @@
               </ul>
             </article>
 
-            <article class="rounded-[1.8rem] border border-[#e5d6ca] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.8rem] border border-[#e5d6ca] bg-white p-6 shadow-soft sm:p-7">
               <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -436,6 +454,191 @@
               </ul>
             </article>
           </div>
+
+          <div class="lp-hover-card mt-10 overflow-hidden rounded-[2rem] border border-[#dfcabc] bg-[linear-gradient(180deg,_#fffdfb_0%,_#f8efe7_100%)] shadow-soft">
+            <div class="grid gap-10 px-6 py-6 sm:px-8 sm:py-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,1.08fr)] lg:items-center">
+              <div class="max-w-xl">
+                <p class="text-sm font-bold uppercase tracking-[0.22em] text-[#a16242]">Fragment ebooka</p>
+                <h3 class="mt-4 font-display text-3xl leading-tight text-[#35271f] sm:text-4xl">Zobacz, jak wygląda materiał w środku</h3>
+                <p class="mt-5 text-lg leading-8 text-[#4b382e]">
+                  Kilka przykładowych stron, żeby od razu zobaczyć układ, styl tłumaczenia i sposób prowadzenia czytelnika krok po kroku.
+                </p>
+
+                <ul class="mt-6 space-y-3">
+                  <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                    <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                    <span>prosty język zamiast urzędniczego tonu</span>
+                  </li>
+                  <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                    <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                    <span>czytelny układ z konkretnymi odpowiedziami</span>
+                  </li>
+                  <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                    <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                    <span>praktyczne przykłady i wyjaśnienia bez lania wody</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="relative mx-auto w-full max-w-[32rem]"
+                data-preview-slider
+              >
+                <div class="absolute left-6 top-8 -z-10 h-36 w-36 rounded-full bg-[#ecd7c7] blur-3xl"></div>
+                <div class="absolute right-4 top-1/3 -z-10 h-40 w-40 rounded-full bg-[#f4e7dc] blur-3xl"></div>
+
+                <div class="absolute right-0 top-0 rounded-full border border-[#d5b39d] bg-[#fff8f2] px-4 py-1.5 text-sm font-bold tracking-[0.16em] text-[#9a5a39] shadow-soft">
+                  <span data-preview-current>1</span>
+                  /
+                  <span data-preview-total>6</span>
+                </div>
+
+                <div class="relative mx-auto mt-10 w-full max-w-[21rem] sm:max-w-[22rem]">
+                  <button
+                    type="button"
+                    class="absolute left-0 top-1/2 z-10 inline-flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#d7c1b0] bg-white text-[#7d5038] shadow-soft transition hover:bg-[#fff7f0]"
+                    data-preview-prev
+                    aria-label="Poprzednia strona"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      class="h-5 w-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 19.5L8.25 12l7.5-7.5"
+                      />
+                    </svg>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="absolute right-0 top-1/2 z-10 inline-flex h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#d7c1b0] bg-white text-[#7d5038] shadow-soft transition hover:bg-[#fff7f0]"
+                    data-preview-next
+                    aria-label="Następna strona"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      class="h-5 w-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </button>
+
+                  <div class="lp-hover-mockup rounded-[2rem] border border-[#d4dae1] bg-[#edf1f5] p-[6px] shadow-card">
+                    <div class="rounded-[1.65rem] border border-[#2a2f36] bg-[#2a2f36] p-[5px]">
+                      <div class="overflow-hidden rounded-[1.3rem] bg-[#11151b]">
+                        <div
+                          class="flex transition-transform duration-500 ease-out"
+                          data-preview-track
+                        >
+                          <figure class="w-full shrink-0 cursor-zoom-in p-0">
+                            <img
+                              src="./assets/images/Biznes bez firmy 1_Strona_06.jpg"
+                              alt="Podgląd strony 6 ebooka Biznes bez firmy"
+                              width="1200"
+                              height="1800"
+                              decoding="async"
+                              class="block max-h-[78vh] w-full object-contain"
+                              data-preview-open
+                              data-preview-index="0"
+                            />
+                          </figure>
+                          <figure class="w-full shrink-0 cursor-zoom-in p-0">
+                            <img
+                              src="./assets/images/Biznes bez firmy 1_Strona_07.jpg"
+                              alt="Podgląd strony 7 ebooka Biznes bez firmy"
+                              width="1200"
+                              height="1800"
+                              loading="lazy"
+                              decoding="async"
+                              class="block max-h-[78vh] w-full object-contain"
+                              data-preview-open
+                              data-preview-index="1"
+                            />
+                          </figure>
+                          <figure class="w-full shrink-0 cursor-zoom-in p-0">
+                            <img
+                              src="./assets/images/Biznes bez firmy 1_Strona_08.jpg"
+                              alt="Podgląd strony 8 ebooka Biznes bez firmy"
+                              width="1200"
+                              height="1800"
+                              loading="lazy"
+                              decoding="async"
+                              class="block max-h-[78vh] w-full object-contain"
+                              data-preview-open
+                              data-preview-index="2"
+                            />
+                          </figure>
+                          <figure class="w-full shrink-0 cursor-zoom-in p-0">
+                            <img
+                              src="./assets/images/Biznes bez firmy 1_Strona_09.jpg"
+                              alt="Podgląd strony 9 ebooka Biznes bez firmy"
+                              width="1200"
+                              height="1800"
+                              loading="lazy"
+                              decoding="async"
+                              class="block max-h-[78vh] w-full object-contain"
+                              data-preview-open
+                              data-preview-index="3"
+                            />
+                          </figure>
+                          <figure class="w-full shrink-0 cursor-zoom-in p-0">
+                            <img
+                              src="./assets/images/Biznes bez firmy 1_Strona_10.jpg"
+                              alt="Podgląd strony 10 ebooka Biznes bez firmy"
+                              width="1200"
+                              height="1800"
+                              loading="lazy"
+                              decoding="async"
+                              class="block max-h-[78vh] w-full object-contain"
+                              data-preview-open
+                              data-preview-index="4"
+                            />
+                          </figure>
+                          <figure class="w-full shrink-0 cursor-zoom-in p-0">
+                            <img
+                              src="./assets/images/Biznes bez firmy 1_Strona_11.jpg"
+                              alt="Podgląd strony 11 ebooka Biznes bez firmy"
+                              width="1200"
+                              height="1800"
+                              loading="lazy"
+                              decoding="async"
+                              class="block max-h-[78vh] w-full object-contain"
+                              data-preview-open
+                              data-preview-index="5"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex items-center justify-center gap-2" data-preview-dots>
+                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#b2643c]" aria-label="Strona 1"></button>
+                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 2"></button>
+                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 3"></button>
+                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 4"></button>
+                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 5"></button>
+                    <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#dcc7b8]" aria-label="Strona 6"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -449,7 +652,7 @@
             <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#4b382e]">Nie musisz wymyślać pomysłu od zera. Otrzymujesz listę sprawdzonych modeli biznesowych, które możesz wdrożyć krok po kroku.</p>
           </div>
 
-          <div class="mx-auto mt-10 max-w-4xl rounded-[2rem] border border-[#dfcabc] bg-white px-6 py-6 shadow-soft sm:px-8">
+          <div class="lp-hover-card mx-auto mt-10 max-w-4xl rounded-[2rem] border border-[#dfcabc] bg-white px-6 py-6 shadow-soft sm:px-8">
             <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_15rem]">
               <div class="space-y-5">
                 <div>
@@ -461,7 +664,7 @@
                   </p>
                 </div>
 
-                <div class="max-w-md rounded-[1.4rem] border border-[#e8cbb5] bg-[#fff7f0] px-5 py-4 text-left shadow-soft">
+                <div class="lp-hover-card max-w-md rounded-[1.4rem] border border-[#e8cbb5] bg-[#fff7f0] px-5 py-4 text-left shadow-soft">
                   <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#9a5a39]">Oferta tylko do niedzieli</p>
                   <p class="mt-2 text-sm leading-6 text-[#6a5346]">Po tym terminie bonus wraca do regularnej ceny.</p>
                 </div>
@@ -469,11 +672,15 @@
 
               <div class="relative mx-auto w-full max-w-[15rem]">
                 <span class="absolute left-1/2 top-0 z-10 inline-flex -translate-x-1/2 -translate-y-1/2 rotate-[-5deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#9a5a39] shadow-soft"> gratis </span>
-                <div class="rounded-[1.6rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
+                <div class="lp-hover-mockup rounded-[1.6rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
                   <div class="rounded-[1.25rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                     <img
                       src="./assets/images/biznes-bez-firmy-bonus-2.jpg"
                       alt="Okładka bonusu 30 pomysłów na biznes bez firmy"
+                      width="2000"
+                      height="3000"
+                      loading="lazy"
+                      decoding="async"
                       class="block w-full rounded-[1rem]"
                     />
                   </div>
@@ -483,7 +690,7 @@
           </div>
 
           <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
-            <article class="rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start justify-between gap-5">
                 <div>
                   <h3 class="mt-3 font-display text-3xl leading-tight text-[#35271f]">Produkty cyfrowe</h3>
@@ -508,14 +715,18 @@
 
               <div class="mt-8 overflow-hidden rounded-[1.5rem] border border-dashed border-[#e3cfbe] bg-[linear-gradient(180deg,_#fffaf6_0%,_#f7ede4_100%)]">
                 <img
-                  src="./assets/images/addon2-group1-digital.jpg"
+                  src="./assets/images/addon2-group1-digital.webp"
                   alt="Przykłady produktów cyfrowych"
+                  width="2528"
+                  height="1696"
+                  loading="lazy"
+                  decoding="async"
                   class="block w-full"
                 />
               </div>
             </article>
 
-            <article class="rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start justify-between gap-5">
                 <div>
                   <h3 class="mt-3 font-display text-3xl leading-tight text-[#35271f]">Rękodzieło i dekoracje</h3>
@@ -540,14 +751,18 @@
 
               <div class="mt-8 overflow-hidden rounded-[1.5rem] border border-dashed border-[#e3cfbe] bg-[linear-gradient(180deg,_#fffaf6_0%,_#f7ede4_100%)]">
                 <img
-                  src="./assets/images/addon2-group2-handmade.jpg"
+                  src="./assets/images/addon2-group2-handmade.webp"
                   alt="Przykłady rękodzieła i dekoracji"
+                  width="2528"
+                  height="1696"
+                  loading="lazy"
+                  decoding="async"
                   class="block w-full"
                 />
               </div>
             </article>
 
-            <article class="rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start justify-between gap-5">
                 <div>
                   <h3 class="mt-3 font-display text-3xl leading-tight text-[#35271f]">Odzież i akcesoria</h3>
@@ -572,14 +787,18 @@
 
               <div class="mt-8 overflow-hidden rounded-[1.5rem] border border-dashed border-[#e3cfbe] bg-[linear-gradient(180deg,_#fffaf6_0%,_#f7ede4_100%)]">
                 <img
-                  src="./assets/images/addon2-group3-sewing.jpg"
+                  src="./assets/images/addon2-group3-sewing.webp"
                   alt="Przykłady odzieży i akcesoriów"
+                  width="2528"
+                  height="1696"
+                  loading="lazy"
+                  decoding="async"
                   class="block w-full"
                 />
               </div>
             </article>
 
-            <article class="rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card rounded-[1.9rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start justify-between gap-5">
                 <div>
                   <h3 class="mt-3 font-display text-3xl leading-tight text-[#35271f]">Gadżety i poligrafia</h3>
@@ -604,8 +823,12 @@
 
               <div class="mt-8 overflow-hidden rounded-[1.5rem] border border-dashed border-[#e3cfbe] bg-[linear-gradient(180deg,_#fffaf6_0%,_#f7ede4_100%)]">
                 <img
-                  src="./assets/images/addon2-group4-print.jpg"
+                  src="./assets/images/addon2-group4-print.webp"
                   alt="Przykłady gadżetów i poligrafii"
+                  width="2528"
+                  height="1696"
+                  loading="lazy"
+                  decoding="async"
                   class="block w-full"
                 />
               </div>
@@ -634,7 +857,7 @@
 
           <div class="mt-14 grid items-center gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)]">
             <div class="max-w-2xl">
-              <div class="rounded-[1.8rem] border border-[#e2d2c5] bg-white px-6 py-6 shadow-soft">
+              <div class="lp-hover-card rounded-[1.8rem] border border-[#e2d2c5] bg-white px-6 py-6 shadow-soft">
                 <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#a16242]">W ściągawce znajdziesz:</p>
 
                 <ul class="mt-5 space-y-4">
@@ -673,11 +896,15 @@
               <div class="mx-auto w-full max-w-[18rem]">
                 <div class="relative">
                   <span class="absolute left-1/2 top-0 z-10 inline-flex -translate-x-1/2 -translate-y-1/2 rotate-[-5deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#9a5a39] shadow-soft"> gratis </span>
-                  <div class="rounded-[1.7rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
+                  <div class="lp-hover-mockup rounded-[1.7rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
                     <div class="rounded-[1.3rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                       <img
                         src="./assets/images/biznes-bez-firmy-bonus-1.jpg"
                         alt="Okładka bonusu Ściągawka przedsiębiorcy"
+                        width="2000"
+                        height="3000"
+                        loading="lazy"
+                        decoding="async"
                         class="block w-full rounded-[1rem]"
                       />
                     </div>
@@ -700,8 +927,12 @@
 
           <div class="mx-auto mt-10 max-w-4xl overflow-hidden rounded-[2rem] border border-[#e2d2c5] bg-white shadow-card">
             <img
-              src="./assets/images/dla kogo.jpg"
+              src="./assets/images/dla kogo.webp"
               alt="Ilustracja pokazująca osoby, dla których przeznaczony jest materiał"
+              width="2528"
+              height="1696"
+              loading="lazy"
+              decoding="async"
               class="block w-full"
             />
           </div>
@@ -711,7 +942,7 @@
           </div>
 
           <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
-            <article class="rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card lp-hover-icon rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start gap-4">
                 <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                   <svg
@@ -725,15 +956,15 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M12 6v12m6-6H6"
+                      d="M9 18h6M10 21h4M8.25 9a3.75 3.75 0 117.5 0c0 1.43-.54 2.49-1.74 3.59-.83.76-1.26 1.41-1.26 2.16v.75h-1.5v-.75c0-.98.41-1.84 1.33-2.67 1.02-.93 1.67-1.68 1.67-3.08a2.25 2.25 0 10-4.5 0"
                     />
                   </svg>
                 </span>
-                <p class="text-base leading-8 text-[#4b382e]">masz pomysł na biznes, ale nie chcesz od razu zakładać firmy</p>
+                <p class="lp-hover-shift text-base leading-8 text-[#4b382e]">masz pomysł na biznes, ale nie chcesz od razu zakładać firmy</p>
               </div>
             </article>
 
-            <article class="rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card lp-hover-icon rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start gap-4">
                 <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                   <svg
@@ -747,15 +978,15 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M8.25 6.75h7.5M8.25 12h7.5m-7.5 5.25h4.5M6 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75z"
+                      d="M7.5 6.75h9M7.5 10.5h9M7.5 14.25h4.5M6.75 3.75h10.5A2.25 2.25 0 0119.5 6v12a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 18V6a2.25 2.25 0 012.25-2.25z"
                     />
                   </svg>
                 </span>
-                <p class="text-base leading-8 text-[#4b382e]">chcesz dorobić do etatu lub studiów</p>
+                <p class="lp-hover-shift text-base leading-8 text-[#4b382e]">chcesz dorobić do etatu lub studiów</p>
               </div>
             </article>
 
-            <article class="rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card lp-hover-icon rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start gap-4">
                 <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                   <svg
@@ -769,15 +1000,15 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M4.5 12h15M12 4.5v15"
+                      d="M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM16 16l5 5"
                     />
                   </svg>
                 </span>
-                <p class="text-base leading-8 text-[#4b382e]">chcesz przetestować pomysł zanim zarejestrujesz działalność</p>
+                <p class="lp-hover-shift text-base leading-8 text-[#4b382e]">chcesz przetestować pomysł zanim zarejestrujesz działalność</p>
               </div>
             </article>
 
-            <article class="rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card lp-hover-icon rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start gap-4">
                 <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                   <svg
@@ -791,15 +1022,15 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M7.5 7.5h9v9h-9zM4.5 4.5h15v15h-15z"
+                      d="M7.5 6.75h9A2.25 2.25 0 0118.75 9v6A2.25 2.25 0 0116.5 17.25h-9A2.25 2.25 0 015.25 15V9A2.25 2.25 0 017.5 6.75zM9 10.5h6M9 13.5h4.5"
                     />
                   </svg>
                 </span>
-                <p class="text-base leading-8 text-[#4b382e]">już sprzedajesz okazjonalnie i chcesz robić to legalnie</p>
+                <p class="lp-hover-shift text-base leading-8 text-[#4b382e]">już sprzedajesz okazjonalnie i chcesz robić to legalnie</p>
               </div>
             </article>
 
-            <article class="rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card lp-hover-icon rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start gap-4">
                 <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                   <svg
@@ -813,15 +1044,15 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M12 8v5m0 4h.01M10.29 3.86l-7.1 12.28A2 2 0 004.92 19h14.16a2 2 0 001.73-2.86l-7.09-12.28a2 2 0 00-3.46 0z"
+                      d="M12 9v4.5m0 3h.01M10.2 4.64L4.36 14.5A2.25 2.25 0 006.3 18h11.4a2.25 2.25 0 001.94-3.5L13.8 4.64a2.08 2.08 0 00-3.6 0z"
                     />
                   </svg>
                 </span>
-                <p class="text-base leading-8 text-[#4b382e]">boisz się popełnić błąd formalny</p>
+                <p class="lp-hover-shift text-base leading-8 text-[#4b382e]">boisz się popełnić błąd formalny</p>
               </div>
             </article>
 
-            <article class="rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
+            <article class="lp-hover-card lp-hover-icon rounded-[1.7rem] border border-[#e2d2c5] bg-white p-6 shadow-soft sm:p-7">
               <div class="flex items-start gap-4">
                 <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242]">
                   <svg
@@ -835,11 +1066,11 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M7.5 12l3 3 6-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      d="M8.25 12.75l2.5 2.5 5-5M12 21a9 9 0 100-18 9 9 0 000 18z"
                     />
                   </svg>
                 </span>
-                <p class="text-base leading-8 text-[#4b382e]">chcesz działać spokojnie i bez stresu</p>
+                <p class="lp-hover-shift text-base leading-8 text-[#4b382e]">chcesz działać spokojnie i bez stresu</p>
               </div>
             </article>
           </div>
@@ -855,7 +1086,7 @@
             <h2 class="mt-4 font-display text-4xl leading-tight text-[#35271f] sm:text-5xl">Po przeczytaniu będziesz wiedzieć:</h2>
           </div>
 
-          <div class="mt-12 rounded-[2rem] border border-[#e2d2c5] bg-white px-6 py-6 shadow-soft sm:px-8 sm:py-8">
+          <div class="lp-hover-card mt-12 rounded-[2rem] border border-[#e2d2c5] bg-white px-6 py-6 shadow-soft sm:px-8 sm:py-8">
             <ul class="space-y-4">
               <li class="flex items-start gap-4 rounded-[1.3rem] border border-[#f0e4d8] bg-[#fffaf6] px-5 py-4">
                 <span class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
@@ -886,13 +1117,17 @@
 
           <div class="mx-auto mt-10 max-w-4xl overflow-hidden rounded-[2rem] border border-[#e2d2c5] bg-white shadow-card">
             <img
-              src="./assets/images/hero.jpg"
+              src="./assets/images/hero.webp"
               alt="Ilustracja osoby rozpoczynającej działalność bez firmy"
+              width="2528"
+              height="1696"
+              loading="lazy"
+              decoding="async"
               class="block w-full"
             />
           </div>
 
-          <div class="mx-auto mt-8 max-w-3xl rounded-[1.8rem] border border-[#e2d2c5] bg-[#f8efe7] px-6 py-6 text-center shadow-soft">
+          <div class="lp-hover-card mx-auto mt-8 max-w-3xl rounded-[1.8rem] border border-[#e2d2c5] bg-[#f8efe7] px-6 py-6 text-center shadow-soft">
             <p class="text-lg leading-8 text-[#4b382e]">Jasne zasady, konkretne granice i spokojna decyzja, co możesz zrobić już teraz.</p>
           </div>
         </div>
@@ -907,7 +1142,7 @@
             <h2 class="mt-4 font-display text-4xl leading-tight text-[#35271f] sm:text-5xl">Zacznij biznes bez firmy za 39,90 zł</h2>
           </div>
 
-          <div class="mx-auto mt-14 max-w-3xl rounded-[2.2rem] border border-[#dfcabc] bg-white p-6 shadow-card sm:p-8">
+          <div class="lp-hover-card mx-auto mt-14 max-w-3xl rounded-[2.2rem] border border-[#dfcabc] bg-white p-6 shadow-card sm:p-8">
             <div class="rounded-[1.8rem] border border-[#efe1d5] bg-[linear-gradient(180deg,_#fffaf6_0%,_#f8efe7_100%)] px-6 py-8 sm:px-8 sm:py-10">
               <p class="text-sm font-bold uppercase tracking-[0.2em] text-[#a16242]">W pakiecie otrzymujesz</p>
 
@@ -943,7 +1178,7 @@
 
                 <a
                   href="https://easl.ink/LA4QE"
-                  class="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[18rem]"
+                  class="lp-hover-button mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[18rem]"
                 >
                   Kup teraz
                 </a>
@@ -963,7 +1198,7 @@
           </div>
 
           <div class="mt-14 space-y-4">
-            <details class="group rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
+            <details class="group lp-hover-card rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                 <span class="text-lg font-semibold leading-7 text-[#35271f]">Czy mogę zarabiać bez zakładania firmy?</span>
                 <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242] transition group-open:rotate-45">
@@ -986,7 +1221,7 @@
               <p class="mt-4 pr-2 text-base leading-8 text-[#4b382e]">Tak, działalność nierejestrowana pozwala zarabiać do określonego limitu bez zakładania działalności gospodarczej.</p>
             </details>
 
-            <details class="group rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
+            <details class="group lp-hover-card rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                 <span class="text-lg font-semibold leading-7 text-[#35271f]">Co jeśli przekroczę limit przychodów?</span>
                 <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242] transition group-open:rotate-45">
@@ -1009,7 +1244,7 @@
               <p class="mt-4 pr-2 text-base leading-8 text-[#4b382e]">Po przekroczeniu limitu masz określony czas na założenie działalności gospodarczej.</p>
             </details>
 
-            <details class="group rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
+            <details class="group lp-hover-card rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                 <span class="text-lg font-semibold leading-7 text-[#35271f]">Czy mogę sprzedawać usługi?</span>
                 <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242] transition group-open:rotate-45">
@@ -1032,7 +1267,7 @@
               <p class="mt-4 pr-2 text-base leading-8 text-[#4b382e]">Tak, ale w niektórych przypadkach pojawiają się dodatkowe obowiązki, np. związane z ZUS.</p>
             </details>
 
-            <details class="group rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
+            <details class="group lp-hover-card rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                 <span class="text-lg font-semibold leading-7 text-[#35271f]">Czy mogę prowadzić sprzedaż przez internet?</span>
                 <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242] transition group-open:rotate-45">
@@ -1055,7 +1290,7 @@
               <p class="mt-4 pr-2 text-base leading-8 text-[#4b382e]">Tak, sprzedaż online jest jedną z najczęściej wybieranych form działalności nierejestrowanej.</p>
             </details>
 
-            <details class="group rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
+            <details class="group lp-hover-card rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                 <span class="text-lg font-semibold leading-7 text-[#35271f]">Czy mogę korzystać z materiału na telefonie?</span>
                 <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242] transition group-open:rotate-45">
@@ -1078,7 +1313,7 @@
               <p class="mt-4 pr-2 text-base leading-8 text-[#4b382e]">Tak. Materiał dostępny jest w formacie PDF oraz EPUB, więc możesz korzystać z niego na komputerze, telefonie lub czytniku ebooków.</p>
             </details>
 
-            <details class="group rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
+            <details class="group lp-hover-card rounded-[1.6rem] border border-[#e2d2c5] bg-white px-6 py-5 shadow-soft">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                 <span class="text-lg font-semibold leading-7 text-[#35271f]">Czy ten materiał jest aktualny na 2026 rok?</span>
                 <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f5e4d8] text-[#a16242] transition group-open:rotate-45">
@@ -1122,7 +1357,7 @@
 
             <a
               href="https://easl.ink/LA4QE"
-              class="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-white/15 sm:w-auto sm:min-w-[18rem]"
+              class="lp-hover-button mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-white/15 sm:w-auto sm:min-w-[18rem]"
             >
               Kup teraz
             </a>
@@ -1135,5 +1370,255 @@
         </div>
       </section>
     </main>
+    <div
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#201711]/80 px-4 opacity-0 backdrop-blur-sm transition duration-300"
+      data-preview-lightbox
+      aria-hidden="true"
+    >
+      <div
+        class="absolute inset-0"
+        data-preview-close
+      ></div>
+
+      <div class="relative z-10 w-full max-w-6xl">
+        <button
+          type="button"
+          class="absolute right-2 top-2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-soft transition hover:bg-white/20 sm:right-4 sm:top-4"
+          data-preview-close
+          aria-label="Zamknij podgląd"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            class="h-5 w-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div class="mx-auto w-fit max-w-full pt-14">
+          <div class="flex items-center justify-between px-1 text-white/90">
+            <p class="text-sm font-bold uppercase tracking-[0.18em]">Powiększony podgląd</p>
+            <p class="text-sm font-semibold">
+              <span data-lightbox-current>1</span>
+              /
+              <span data-lightbox-total>6</span>
+            </p>
+          </div>
+
+          <div class="relative mt-4 flex justify-center">
+            <button
+              type="button"
+              class="absolute left-0 top-1/2 z-10 inline-flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-soft transition hover:bg-white/20 sm:h-14 sm:w-14"
+              data-lightbox-prev
+              aria-label="Poprzednia strona w podglądzie"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              class="absolute right-0 top-1/2 z-10 inline-flex h-12 w-12 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-soft transition hover:bg-white/20 sm:h-14 sm:w-14"
+              data-lightbox-next
+              aria-label="Następna strona w podglądzie"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+
+            <div class="w-fit max-w-full rounded-[2rem] border border-white/10 bg-[#edf1f5] p-[8px] shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
+              <div class="w-fit max-w-full rounded-[1.7rem] border border-[#2a2f36] bg-[#2a2f36] p-[6px]">
+                <img
+                  src="./assets/images/Biznes bez firmy 1_Strona_06.jpg"
+                  alt="Powiększony podgląd strony ebooka Biznes bez firmy"
+                  width="1200"
+                  height="1800"
+                  decoding="async"
+                  class="block max-h-[90vh] w-auto max-w-[78vw] rounded-[1.35rem] object-contain"
+                  data-lightbox-image
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 flex items-center justify-center gap-2" data-lightbox-dots>
+            <button type="button" class="h-2.5 w-2.5 rounded-full bg-[#b2643c]" aria-label="Powiększona strona 1"></button>
+            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 2"></button>
+            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 3"></button>
+            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 4"></button>
+            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 5"></button>
+            <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/35" aria-label="Powiększona strona 6"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const previewSlider = document.querySelector('[data-preview-slider]');
+
+      if (previewSlider) {
+        const track = previewSlider.querySelector('[data-preview-track]');
+        const prevButton = previewSlider.querySelector('[data-preview-prev]');
+        const nextButton = previewSlider.querySelector('[data-preview-next]');
+        const currentLabel = previewSlider.querySelector('[data-preview-current]');
+        const totalLabel = previewSlider.querySelector('[data-preview-total]');
+        const dots = Array.from(previewSlider.querySelectorAll('[data-preview-dots] button'));
+        const openButtons = Array.from(previewSlider.querySelectorAll('[data-preview-open]'));
+        const slides = Array.from(track.children);
+        const lightbox = document.querySelector('[data-preview-lightbox]');
+        const lightboxImage = lightbox?.querySelector('[data-lightbox-image]');
+        const lightboxCurrent = lightbox?.querySelector('[data-lightbox-current]');
+        const lightboxTotal = lightbox?.querySelector('[data-lightbox-total]');
+        const lightboxPrev = lightbox?.querySelector('[data-lightbox-prev]');
+        const lightboxNext = lightbox?.querySelector('[data-lightbox-next]');
+        const lightboxDots = Array.from(lightbox?.querySelectorAll('[data-lightbox-dots] button') || []);
+        const lightboxClose = Array.from(lightbox?.querySelectorAll('[data-preview-close]') || []);
+        let currentIndex = 0;
+
+        totalLabel.textContent = String(slides.length);
+        if (lightboxTotal) {
+          lightboxTotal.textContent = String(slides.length);
+        }
+
+        const syncLightbox = () => {
+          if (!lightboxImage || !lightboxCurrent) return;
+
+          const activeImage = slides[currentIndex]?.querySelector('img');
+          if (!activeImage) return;
+
+          lightboxImage.src = activeImage.src;
+          lightboxImage.alt = activeImage.alt;
+          lightboxCurrent.textContent = String(currentIndex + 1);
+
+          lightboxDots.forEach((dot, index) => {
+            dot.classList.toggle('bg-[#b2643c]', index === currentIndex);
+            dot.classList.toggle('bg-white/35', index !== currentIndex);
+          });
+        };
+
+        const renderPreviewSlide = () => {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          currentLabel.textContent = String(currentIndex + 1);
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('bg-[#b2643c]', index === currentIndex);
+            dot.classList.toggle('bg-[#dcc7b8]', index !== currentIndex);
+          });
+
+          syncLightbox();
+        };
+
+        const openLightbox = (index) => {
+          currentIndex = index;
+          renderPreviewSlide();
+          if (!lightbox) return;
+          lightbox.classList.remove('pointer-events-none', 'opacity-0');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('overflow-hidden');
+        };
+
+        const closeLightbox = () => {
+          if (!lightbox) return;
+          lightbox.classList.add('pointer-events-none', 'opacity-0');
+          lightbox.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('overflow-hidden');
+        };
+
+        prevButton.addEventListener('click', () => {
+          currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+          renderPreviewSlide();
+        });
+
+        nextButton.addEventListener('click', () => {
+          currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+          renderPreviewSlide();
+        });
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            currentIndex = index;
+            renderPreviewSlide();
+          });
+        });
+
+        openButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            openLightbox(Number(button.dataset.previewIndex || 0));
+          });
+        });
+
+        lightboxPrev?.addEventListener('click', () => {
+          currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+          renderPreviewSlide();
+        });
+
+        lightboxNext?.addEventListener('click', () => {
+          currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+          renderPreviewSlide();
+        });
+
+        lightboxDots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            currentIndex = index;
+            renderPreviewSlide();
+          });
+        });
+
+        lightboxClose.forEach((element) => {
+          element.addEventListener('click', closeLightbox);
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (!lightbox || lightbox.getAttribute('aria-hidden') === 'true') return;
+
+          if (event.key === 'Escape') {
+            closeLightbox();
+          }
+
+          if (event.key === 'ArrowLeft') {
+            currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+            renderPreviewSlide();
+          }
+
+          if (event.key === 'ArrowRight') {
+            currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+            renderPreviewSlide();
+          }
+        });
+
+        renderPreviewSlide();
+      }
+    </script>
   </body>
 </html>

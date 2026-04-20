@@ -23,10 +23,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Dziękujemy za zakup | Inwestowanie w kryzysie</title>
+    <title>Dziękujemy za zakup | Biznes bez firmy</title>
     <meta
       name="description"
-      content="Strona podziękowania po zakupie pakietu Inwestowanie w kryzysie."
+      content="Strona podziękowania po zakupie pakietu Biznes bez firmy."
     />
     <link
       rel="preconnect"
@@ -38,7 +38,12 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/images/favicon.svg"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,14 +57,18 @@
           extend: {
             fontFamily: {
               sans: ['var(--font-body)', 'sans-serif'],
-              display: ['var(--font-display)', 'sans-serif'],
+              display: ['var(--font-display)', 'serif'],
+            },
+            boxShadow: {
+              soft: '0 24px 60px rgba(96, 70, 50, 0.12)',
+              card: '0 28px 70px rgba(79, 57, 39, 0.14)',
             },
           },
         },
       };
     </script>
   </head>
-  <body class="lp-theme font-sans text-white antialiased">
+  <body class="lp-theme font-sans text-stone-900 antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -70,53 +79,124 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <main class="relative isolate min-h-screen overflow-hidden">
+    <main class="relative isolate min-h-screen overflow-hidden bg-[linear-gradient(180deg,_#fbf6f1_0%,_#f4ece2_100%)]">
       <div class="absolute inset-0 -z-10">
-        <div class="absolute left-0 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl"></div>
-        <div class="absolute right-0 top-24 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"></div>
+        <div class="absolute left-0 top-0 h-80 w-80 rounded-full bg-[#b2643c]/10 blur-3xl"></div>
+        <div class="absolute right-0 top-24 h-96 w-96 rounded-full bg-[#e4cdbb]/30 blur-3xl"></div>
       </div>
 
-      <section class="mx-auto flex min-h-screen max-w-5xl items-center px-6 py-20 sm:px-10">
-        <div class="w-full rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-2xl shadow-black/30 backdrop-blur-sm sm:p-12">
-          <span class="inline-flex items-center rounded-full border border-orange-300/40 bg-orange-500 px-4 py-2 text-sm font-semibold tracking-wide text-white shadow-lg shadow-orange-500/30"> Płatność zakończona </span>
+      <section class="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-16 sm:px-10 lg:px-12">
+        <div class="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
+          <div class="rounded-[2.2rem] border border-[#dfcabc] bg-white/88 p-8 shadow-card backdrop-blur sm:p-10">
+            <span class="inline-flex items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-4 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#9a5a39] shadow-soft">
+              Płatność zakończona
+            </span>
 
-          <h1 class="mt-8 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
-            Dziękujemy. Twój pakiet został
-            <span class="text-orange-500">zarezerwowany poprawnie.</span>
-          </h1>
+            <h1 class="mt-8 font-display text-4xl leading-tight text-[#35271f] sm:text-5xl lg:text-6xl">
+              Dziękujemy. Twój pakiet
+              <span class="text-[#9a5a39]">Biznes bez firmy</span>
+              został zamówiony poprawnie.
+            </h1>
 
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Za chwilę otrzymasz szczegóły dostępu do materiałów. Jeśli płatność została już zaksięgowana, sprawdź swoją skrzynkę e-mail oraz folder SPAM lub Oferty.</p>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-[#4b382e]">
+              Za chwilę otrzymasz wiadomość e-mail z dostępem do materiałów. Jeśli płatność została już zaksięgowana, sprawdź skrzynkę główną, Oferty oraz folder SPAM.
+            </p>
 
-          <div class="mt-10 grid gap-6 md:grid-cols-3">
-            <article class="rounded-2xl border border-white/10 bg-slate-800/80 p-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Krok 1</p>
-              <p class="mt-3 text-base leading-7 text-slate-300">Odbierz wiadomość e-mail z linkami do pobrania plików.</p>
-            </article>
+            <div class="mt-10 rounded-[1.8rem] border border-[#e2d2c5] bg-[#fff7f0] px-6 py-5 shadow-soft">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#a16242]">W pakiecie otrzymujesz</p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                  <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                  <span>Ebook „Biznes bez firmy”</span>
+                </li>
+                <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                  <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                  <span>Dodatek „30 pomysłów na biznes bez firmy”</span>
+                </li>
+                <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                  <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                  <span>Ściągawkę przedsiębiorcy nierejestrowanego</span>
+                </li>
+                <li class="flex items-start gap-3 text-base leading-7 text-[#4b382e]">
+                  <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f5e4d8] text-[#a16242]">✓</span>
+                  <span>Formaty PDF oraz EPUB</span>
+                </li>
+              </ul>
+            </div>
 
-            <article class="rounded-2xl border border-white/10 bg-slate-800/80 p-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Krok 2</p>
-              <p class="mt-3 text-base leading-7 text-slate-300">Pobierz e-book główny oraz bonusowy dodatek Megatrendy 2030.</p>
-            </article>
-
-            <article class="rounded-2xl border border-white/10 bg-slate-800/80 p-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Krok 3</p>
-              <p class="mt-3 text-base leading-7 text-slate-300">Zacznij od planu działania na najbliższe 24 godziny.</p>
-            </article>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="../"
+                class="inline-flex items-center justify-center rounded-2xl bg-[#b2643c] px-7 py-4 text-center text-sm font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:bg-[#9d5734]"
+              >
+                Wróć do strony produktu
+              </a>
+              <a
+                href="mailto:office@officinum.com"
+                class="inline-flex items-center justify-center rounded-2xl border border-[#dfcabc] bg-white px-7 py-4 text-center text-sm font-extrabold uppercase tracking-[0.08em] text-[#4b382e] transition duration-300 hover:bg-[#fff7f0]"
+              >
+                Potrzebuję pomocy
+              </a>
+            </div>
           </div>
 
-          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="../"
-              class="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-orange-600"
-            >
-              Wróć do strony produktu
-            </a>
-            <a
-              href="mailto:office@officinum.com"
-              class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.08em] text-slate-200 transition hover:bg-white/10"
-            >
-              Potrzebuję pomocy
-            </a>
+          <div class="relative mx-auto w-full max-w-[22rem]">
+            <div class="absolute left-6 top-10 -z-10 h-40 w-40 rounded-full bg-[#eed9ca] blur-3xl"></div>
+            <div class="absolute right-0 top-1/2 -z-10 h-44 w-44 rounded-full bg-[#f2e4d8] blur-3xl"></div>
+
+            <div class="space-y-5">
+              <figure class="rounded-[1.8rem] border border-[#d5dae1] bg-[#edf1f5] p-[6px] shadow-card">
+                <div class="rounded-[1.4rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
+                  <img
+                    src="../assets/images/biznes-bez-firmy-main.webp"
+                    alt="Okładka ebooka Biznes bez firmy"
+                    width="2000"
+                    height="3000"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="block w-full rounded-[1.1rem]"
+                  />
+                </div>
+              </figure>
+
+              <div class="grid grid-cols-2 gap-4">
+                <figure class="relative pt-4">
+                  <span class="absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[-4deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft">
+                    Bonus 1
+                  </span>
+                  <div class="rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
+                    <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
+                      <img
+                        src="../assets/images/biznes-bez-firmy-bonus-1.webp"
+                        alt="Okładka bonusu Ściągawka przedsiębiorcy"
+                        width="2000"
+                        height="3000"
+                        decoding="async"
+                        class="block w-full rounded-[0.9rem]"
+                      />
+                    </div>
+                  </div>
+                </figure>
+
+                <figure class="relative pt-4">
+                  <span class="absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[3deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft">
+                    Bonus 2
+                  </span>
+                  <div class="rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
+                    <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
+                      <img
+                        src="../assets/images/biznes-bez-firmy-bonus-2.webp"
+                        alt="Okładka bonusu 30 pomysłów na biznes bez firmy"
+                        width="2000"
+                        height="3000"
+                        decoding="async"
+                        class="block w-full rounded-[0.9rem]"
+                      />
+                    </div>
+                  </div>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -63,3 +63,60 @@ body.lp-theme {
 .lp-theme ::selection {
   background: rgba(249, 115, 22, 0.22);
 }
+
+.lp-theme .lp-hover-card,
+.lp-theme .lp-hover-mockup,
+.lp-theme .lp-hover-button,
+.lp-theme .lp-hover-icon span:first-child,
+.lp-theme .lp-hover-icon svg,
+.lp-theme .lp-hover-shift {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease,
+    opacity 220ms ease;
+  will-change: transform;
+}
+
+.lp-theme .lp-hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(79, 57, 39, 0.16);
+  border-color: rgba(178, 100, 60, 0.28);
+}
+
+.lp-theme .lp-hover-mockup:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 34px 78px rgba(79, 57, 39, 0.2);
+}
+
+.lp-theme .lp-hover-button:hover {
+  transform: translateY(-2px);
+}
+
+.lp-theme .lp-hover-icon:hover span:first-child {
+  transform: translateY(-2px) scale(1.03);
+  background-color: #f1dfd2;
+}
+
+.lp-theme .lp-hover-icon:hover svg {
+  transform: scale(1.06);
+}
+
+.lp-theme .lp-hover-icon:hover .lp-hover-shift {
+  transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-theme .lp-hover-card,
+  .lp-theme .lp-hover-mockup,
+  .lp-theme .lp-hover-button,
+  .lp-theme .lp-hover-icon span:first-child,
+  .lp-theme .lp-hover-icon svg,
+  .lp-theme .lp-hover-shift {
+    transition: none;
+    transform: none;
+    will-change: auto;
+  }
+}
