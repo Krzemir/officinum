@@ -40,14 +40,427 @@
       imagesizes="(max-width: 1023px) min(88vw, 33rem), 32rem"
       fetchpriority="high"
     />
+    <style>
+      :root {
+        --font-display: "Cormorant Garamond", Georgia, serif;
+        --font-body: "Inter", sans-serif;
+        --color-page-bg: #f6efe7;
+        --color-page-text: #35271f;
+        --color-accent: #b2643c;
+        --color-accent-strong: #9d5734;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        background: var(--color-page-bg);
+        scroll-behavior: smooth;
+      }
+
+      body.lp-theme {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #fbf6f1 0%, #f4ece2 100%);
+        color: var(--color-page-text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .lp-theme img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .lp-theme a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .lp-theme main > section:not(:first-of-type) {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 1200px;
+      }
+
+      .lp-critical-hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+      }
+
+      .lp-critical-hero__bg {
+        position: absolute;
+        inset: 0;
+        z-index: -10;
+        background-image:
+          radial-gradient(circle at top left, rgba(178, 100, 60, 0.1), transparent 28rem),
+          linear-gradient(180deg, #fbf6f1 0%, #f4ece2 100%);
+      }
+
+      .lp-critical-hero__line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -10;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(178, 100, 60, 0.35), transparent);
+      }
+
+      .lp-critical-hero__inner {
+        display: grid;
+        align-items: center;
+        gap: 3.5rem;
+        min-height: 100vh;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+
+      .lp-critical-copy {
+        max-width: 42rem;
+      }
+
+      .lp-critical-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.625rem 1.25rem;
+        border: 1px solid #d0a588;
+        border-radius: 9999px;
+        background-image: linear-gradient(180deg, #fff4ea 0%, #f5dfcf 100%);
+        color: #8f4f2f;
+        font-size: 0.875rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        box-shadow: 0 18px 36px rgba(178, 100, 60, 0.18);
+        backdrop-filter: blur(8px);
+      }
+
+      .lp-critical-pill__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        border: 1px solid #d7b29a;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.8);
+        color: #a15b38;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+
+      .lp-critical-pill__icon svg {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .lp-critical-title {
+        max-width: 40rem;
+        margin: 2rem 0 0;
+        color: #35271f;
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+      }
+
+      .lp-critical-subtitle {
+        max-width: 42rem;
+        margin: 1rem 0 0;
+        color: #9a5a39;
+        font-size: clamp(1.25rem, 4vw, 1.5rem);
+        font-weight: 600;
+        line-height: 1.7;
+      }
+
+      .lp-critical-list {
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .lp-critical-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        color: #4b382e;
+        font-size: clamp(1rem, 2.8vw, 1.125rem);
+        font-weight: 500;
+        line-height: 1.75;
+      }
+
+      .lp-critical-list li + li {
+        margin-top: 0.75rem;
+      }
+
+      .lp-critical-check {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-top: 0.25rem;
+        border-radius: 9999px;
+        background: #f0ddcf;
+        color: #9a5a39;
+      }
+
+      .lp-critical-body {
+        max-width: 36rem;
+        margin: 1.5rem 0 0;
+        color: #5d4b40;
+        font-size: clamp(1.125rem, 3vw, 1.25rem);
+        line-height: 1.8;
+      }
+
+      .lp-critical-card {
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+        border: 1px solid #dfcabc;
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 28px 70px rgba(79, 57, 39, 0.14);
+        backdrop-filter: blur(8px);
+      }
+
+      .lp-critical-card__label {
+        margin: 0;
+        color: #9a5a39;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .lp-critical-price {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+      }
+
+      .lp-critical-price__old {
+        margin: 0;
+        color: #9b8778;
+        font-size: clamp(1.5rem, 4vw, 1.875rem);
+        font-weight: 600;
+        line-height: 1;
+        text-decoration: line-through;
+      }
+
+      .lp-critical-price__new {
+        margin: 0;
+        color: #35271f;
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 7vw, 3.75rem);
+        line-height: 1;
+      }
+
+      .lp-critical-card__actions {
+        margin-top: 1.5rem;
+      }
+
+      .lp-critical-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1.25rem 2rem;
+        border-radius: 1rem;
+        background: #b2643c;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 20px 40px rgba(178, 100, 60, 0.2);
+      }
+
+      .lp-critical-meta {
+        margin-top: 1rem;
+        color: #756256;
+        font-size: 0.875rem;
+        line-height: 1.7;
+      }
+
+      .lp-critical-visual {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      .lp-critical-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -10;
+        margin: auto;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 9999px;
+        background: #e7d3c3;
+        filter: blur(64px);
+      }
+
+      .lp-critical-visual__frame {
+        position: relative;
+        width: 100%;
+        max-width: 42rem;
+      }
+
+      .lp-critical-visual__grid {
+        position: relative;
+        display: grid;
+        gap: 1.25rem;
+        align-items: flex-start;
+      }
+
+      .lp-critical-visual__main {
+        width: 100%;
+        max-width: 33rem;
+        margin: 0 auto;
+      }
+
+      .lp-critical-device {
+        padding: 8px;
+        border: 1px solid #d5dae1;
+        border-radius: 1.8rem;
+        background: #edf1f5;
+        box-shadow: 0 28px 70px rgba(79, 57, 39, 0.14);
+      }
+
+      .lp-critical-device__screen {
+        padding: 5px;
+        border: 1px solid #2a2f36;
+        border-radius: 1.45rem;
+        background: #2a2f36;
+      }
+
+      .lp-critical-device__screen img {
+        border-radius: 1.15rem;
+      }
+
+      .lp-critical-bonuses {
+        display: none;
+      }
+
+      @media (min-width: 640px) {
+        .lp-critical-hero__inner {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+
+        .lp-critical-card {
+          padding: 1.75rem;
+        }
+
+        .lp-critical-button {
+          width: auto;
+          min-width: 16rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .lp-critical-hero__inner {
+          grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+          padding: 5rem 3rem;
+        }
+
+        .lp-critical-visual {
+          justify-content: flex-end;
+        }
+
+        .lp-critical-visual__grid {
+          grid-template-columns: minmax(0, 1fr) 10rem;
+        }
+
+        .lp-critical-visual__main {
+          max-width: none;
+        }
+
+        .lp-critical-bonuses {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+          padding-top: 3rem;
+        }
+
+        .lp-critical-bonus {
+          padding-top: 1rem;
+        }
+
+        .lp-critical-bonus__label {
+          position: absolute;
+          top: 0;
+          left: 1rem;
+          z-index: 10;
+          display: inline-flex;
+          align-items: center;
+          padding: 0.25rem 0.75rem;
+          border: 1px solid #d5b39d;
+          border-radius: 9999px;
+          background: #fff8f2;
+          color: #9a5a39;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          box-shadow: 0 24px 60px rgba(96, 70, 50, 0.12);
+          transform: translateY(-50%);
+        }
+
+        .lp-critical-bonus__device {
+          position: relative;
+          padding: 5px;
+          border: 1px solid #dde2e8;
+          border-radius: 1.35rem;
+          background: #f4f6f8;
+          box-shadow: 0 24px 60px rgba(96, 70, 50, 0.12);
+        }
+
+        .lp-critical-bonus__screen {
+          padding: 4px;
+          border: 1px solid #2a2f36;
+          border-radius: 1.2rem;
+          background: #2a2f36;
+        }
+
+        .lp-critical-bonus__screen img {
+          border-radius: 0.9rem;
+        }
+      }
+    </style>
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="./tailwind.output.css"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="./theme.css"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="./tailwind.output.css"
+      />
+      <link
+        rel="stylesheet"
+        href="./theme.css"
+      />
+    </noscript>
   </head>
   <body class="lp-theme font-sans text-stone-900 antialiased">
     <!-- Google Tag Manager (noscript) -->
@@ -61,14 +474,14 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <main>
-      <section class="relative isolate overflow-hidden">
-        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(178,100,60,0.10),_transparent_28rem),linear-gradient(180deg,_#fbf6f1_0%,_#f4ece2_100%)]"></div>
-        <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-[#b2643c]/35 to-transparent"></div>
+      <section class="lp-critical-hero relative isolate overflow-hidden">
+        <div class="lp-critical-hero__bg absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(178,100,60,0.10),_transparent_28rem),linear-gradient(180deg,_#fbf6f1_0%,_#f4ece2_100%)]"></div>
+        <div class="lp-critical-hero__line absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-[#b2643c]/35 to-transparent"></div>
 
-        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-6 py-16 sm:px-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:px-12 lg:py-20">
-          <div class="max-w-2xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-[#d0a588] bg-[linear-gradient(180deg,_#fff4ea_0%,_#f5dfcf_100%)] px-5 py-2.5 text-sm font-extrabold tracking-[0.08em] text-[#8f4f2f] shadow-[0_18px_36px_rgba(178,100,60,0.18)] backdrop-blur">
-              <span class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#d7b29a] bg-white/80 text-[#a15b38] shadow-sm">
+        <div class="lp-critical-hero__inner mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-6 py-16 sm:px-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:px-12 lg:py-20">
+          <div class="lp-critical-copy max-w-2xl">
+            <div class="lp-critical-pill inline-flex items-center gap-2 rounded-full border border-[#d0a588] bg-[linear-gradient(180deg,_#fff4ea_0%,_#f5dfcf_100%)] px-5 py-2.5 text-sm font-extrabold tracking-[0.08em] text-[#8f4f2f] shadow-[0_18px_36px_rgba(178,100,60,0.18)] backdrop-blur">
+              <span class="lp-critical-pill__icon inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#d7b29a] bg-white/80 text-[#a15b38] shadow-sm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -87,43 +500,43 @@
               <span>Aktualne na 2026 r.</span>
             </div>
 
-            <h1 class="mt-8 max-w-xl font-display text-5xl leading-[0.95] tracking-[-0.04em] text-[#35271f] sm:text-6xl lg:text-7xl">Biznes bez firmy</h1>
+            <h1 class="lp-critical-title mt-8 max-w-xl font-display text-5xl leading-[0.95] tracking-[-0.04em] text-[#35271f] sm:text-6xl lg:text-7xl">Biznes bez firmy</h1>
 
-            <p class="mt-4 max-w-2xl text-xl font-semibold leading-8 text-[#9a5a39] sm:text-2xl">Wszystko co musisz wiedzieć o nierejestrowanej działalności gospodarczej.</p>
+            <p class="lp-critical-subtitle mt-4 max-w-2xl text-xl font-semibold leading-8 text-[#9a5a39] sm:text-2xl">Wszystko co musisz wiedzieć o nierejestrowanej działalności gospodarczej.</p>
 
-            <ul class="mt-6 space-y-3">
+            <ul class="lp-critical-list mt-6 space-y-3">
               <li class="flex items-start gap-3 text-base font-medium leading-7 text-[#4b382e] sm:text-lg">
-                <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0ddcf] text-[#9a5a39]">✓</span>
+                <span class="lp-critical-check mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0ddcf] text-[#9a5a39]">✓</span>
                 <span>Zarabiaj legalnie bez zakładania firmy</span>
               </li>
               <li class="flex items-start gap-3 text-base font-medium leading-7 text-[#4b382e] sm:text-lg">
-                <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0ddcf] text-[#9a5a39]">✓</span>
+                <span class="lp-critical-check mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0ddcf] text-[#9a5a39]">✓</span>
                 <span>Uniknij błędów z ZUS i VAT</span>
               </li>
               <li class="flex items-start gap-3 text-base font-medium leading-7 text-[#4b382e] sm:text-lg">
-                <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0ddcf] text-[#9a5a39]">✓</span>
+                <span class="lp-critical-check mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0ddcf] text-[#9a5a39]">✓</span>
                 <span>Sprawdź pomysł bez ryzyka</span>
               </li>
             </ul>
 
-            <p class="mt-6 max-w-xl text-lg leading-8 text-[#5d4b40] sm:text-xl">Jak legalnie zarabiać, testować pomysły i budować dochód bez zakładania działalności gospodarczej.</p>
+            <p class="lp-critical-body mt-6 max-w-xl text-lg leading-8 text-[#5d4b40] sm:text-xl">Jak legalnie zarabiać, testować pomysły i budować dochód bez zakładania działalności gospodarczej.</p>
 
-            <div class="lp-hover-card mt-10 rounded-[2rem] border border-[#dfcabc] bg-white/85 p-6 shadow-card backdrop-blur sm:p-7">
-              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#9a5a39]">Cena</p>
-              <div class="mt-3 flex items-end gap-3">
-                <p class="text-2xl font-semibold leading-none text-[#9b8778] line-through sm:text-3xl">59,90 zł</p>
-                <p class="font-display text-5xl leading-none text-[#35271f] sm:text-6xl">39,90 zł</p>
+            <div class="lp-critical-card lp-hover-card mt-10 rounded-[2rem] border border-[#dfcabc] bg-white/85 p-6 shadow-card backdrop-blur sm:p-7">
+              <p class="lp-critical-card__label text-sm font-semibold uppercase tracking-[0.18em] text-[#9a5a39]">Cena</p>
+              <div class="lp-critical-price mt-3 flex items-end gap-3">
+                <p class="lp-critical-price__old text-2xl font-semibold leading-none text-[#9b8778] line-through sm:text-3xl">59,90 zł</p>
+                <p class="lp-critical-price__new font-display text-5xl leading-none text-[#35271f] sm:text-6xl">39,90 zł</p>
               </div>
 
-              <div class="mt-6">
+              <div class="lp-critical-card__actions mt-6">
                 <a
                   href="https://easl.ink/LA4QE"
-                  class="lp-hover-button inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[16rem]"
+                  class="lp-critical-button lp-hover-button inline-flex w-full items-center justify-center rounded-2xl bg-[#b2643c] px-8 py-5 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#9d5734] focus:outline-none focus:ring-4 focus:ring-[#b2643c]/25 sm:w-auto sm:min-w-[16rem]"
                 >
                   Kup teraz
                 </a>
 
-                <div class="mt-4 text-sm leading-6 text-[#756256]">
+                <div class="lp-critical-meta mt-4 text-sm leading-6 text-[#756256]">
                   <p>Natychmiastowy dostęp</p>
                   <p>PDF + 2 bonusy</p>
                 </div>
@@ -131,17 +544,17 @@
             </div>
           </div>
 
-          <div class="relative flex justify-center lg:justify-end">
+          <div class="lp-critical-visual relative flex justify-center lg:justify-end">
             <div class="absolute inset-0 -z-10 m-auto h-72 w-72 rounded-full bg-[#e7d3c3] blur-3xl"></div>
 
-            <div class="relative w-full max-w-[42rem]">
+            <div class="lp-critical-visual__frame relative w-full max-w-[42rem]">
               <div class="absolute -left-4 top-10 hidden h-40 w-40 rounded-full border border-white/70 bg-white/50 blur-2xl sm:block"></div>
               <div class="absolute -right-4 bottom-10 hidden h-44 w-44 rounded-full border border-[#ead9ca] bg-[#f7f0e9] blur-2xl sm:block"></div>
 
-              <div class="relative grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_10rem]">
-                <figure class="mx-auto w-full max-w-[33rem] lg:max-w-none">
-                  <div class="lp-hover-mockup rounded-[1.8rem] border border-[#d5dae1] bg-[#edf1f5] p-[8px] shadow-card">
-                    <div class="rounded-[1.45rem] border border-[#2a2f36] bg-[#2a2f36] p-[5px]">
+              <div class="lp-critical-visual__grid relative grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_10rem]">
+                <figure class="lp-critical-visual__main mx-auto w-full max-w-[33rem] lg:max-w-none">
+                  <div class="lp-critical-device lp-hover-mockup rounded-[1.8rem] border border-[#d5dae1] bg-[#edf1f5] p-[8px] shadow-card">
+                    <div class="lp-critical-device__screen rounded-[1.45rem] border border-[#2a2f36] bg-[#2a2f36] p-[5px]">
                       <img
                         src="./assets/images/biznes-bez-firmy-main.webp"
                         srcset="./assets/images/biznes-bez-firmy-main-720.webp 720w, ./assets/images/biznes-bez-firmy-main-1200.webp 1200w"
@@ -157,11 +570,11 @@
                   </div>
                 </figure>
 
-                <div class="flex flex-col gap-5 pt-8 lg:pt-12">
-                  <figure class="relative pt-4">
-                    <span class="absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[-4deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft"> Bonus 1 </span>
-                    <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
-                      <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
+                <div class="lp-critical-bonuses flex flex-col gap-5 pt-8 lg:pt-12">
+                  <figure class="lp-critical-bonus relative pt-4">
+                    <span class="lp-critical-bonus__label absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[-4deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft"> Bonus 1 </span>
+                    <div class="lp-critical-bonus__device lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
+                      <div class="lp-critical-bonus__screen rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
                           src="./assets/images/biznes-bez-firmy-bonus-1-420.webp"
                           srcset="./assets/images/biznes-bez-firmy-bonus-1-420.webp 420w, ./assets/images/biznes-bez-firmy-bonus-1.webp 2000w"
@@ -177,10 +590,10 @@
                     </div>
                   </figure>
 
-                  <figure class="relative pt-4">
-                    <span class="absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[3deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft"> Bonus 2 </span>
-                    <div class="lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
-                      <div class="rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
+                  <figure class="lp-critical-bonus relative pt-4">
+                    <span class="lp-critical-bonus__label absolute left-4 top-0 z-10 inline-flex -translate-y-1/2 rotate-[3deg] items-center rounded-full border border-[#d5b39d] bg-[#fff8f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9a5a39] shadow-soft"> Bonus 2 </span>
+                    <div class="lp-critical-bonus__device lp-hover-mockup rounded-[1.35rem] border border-[#dde2e8] bg-[#f4f6f8] p-[5px] shadow-soft">
+                      <div class="lp-critical-bonus__screen rounded-[1.2rem] border border-[#2a2f36] bg-[#2a2f36] p-[4px]">
                         <img
                           src="./assets/images/biznes-bez-firmy-bonus-2-420.webp"
                           srcset="./assets/images/biznes-bez-firmy-bonus-2-420.webp 420w, ./assets/images/biznes-bez-firmy-bonus-2.webp 2000w"
@@ -218,6 +631,7 @@
                   width="2528"
                   height="1696"
                   loading="lazy"
+                  fetchpriority="low"
                   decoding="async"
                   class="block w-full"
                 />
@@ -316,6 +730,7 @@
                   width="2528"
                   height="1696"
                   loading="lazy"
+                  fetchpriority="low"
                   decoding="async"
                   class="block w-full"
                 />
@@ -554,6 +969,8 @@
                               alt="Podgląd strony 6 ebooka Biznes bez firmy"
                               width="1200"
                               height="1800"
+                              loading="lazy"
+                              fetchpriority="low"
                               decoding="async"
                               class="block max-h-[78vh] w-full object-contain"
                               data-preview-open
@@ -569,6 +986,7 @@
                               width="1200"
                               height="1800"
                               loading="lazy"
+                              fetchpriority="low"
                               decoding="async"
                               class="block max-h-[78vh] w-full object-contain"
                               data-preview-open
@@ -584,6 +1002,7 @@
                               width="1200"
                               height="1800"
                               loading="lazy"
+                              fetchpriority="low"
                               decoding="async"
                               class="block max-h-[78vh] w-full object-contain"
                               data-preview-open
@@ -599,6 +1018,7 @@
                               width="1200"
                               height="1800"
                               loading="lazy"
+                              fetchpriority="low"
                               decoding="async"
                               class="block max-h-[78vh] w-full object-contain"
                               data-preview-open
@@ -614,6 +1034,7 @@
                               width="1200"
                               height="1800"
                               loading="lazy"
+                              fetchpriority="low"
                               decoding="async"
                               class="block max-h-[78vh] w-full object-contain"
                               data-preview-open
@@ -629,6 +1050,7 @@
                               width="1200"
                               height="1800"
                               loading="lazy"
+                              fetchpriority="low"
                               decoding="async"
                               class="block max-h-[78vh] w-full object-contain"
                               data-preview-open
