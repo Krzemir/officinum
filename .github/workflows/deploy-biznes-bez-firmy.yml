@@ -32,6 +32,7 @@ jobs:
           cd $REMOTE_PARENT
           -mkdir $REMOTE_DIR
           cd $REMOTE_DIR
+          put landing-pages/$LANDING_SLUG/.htaccess .htaccess
           put landing-pages/$LANDING_SLUG/index.html index.html
           put landing-pages/$LANDING_SLUG/theme.css theme.css
           put landing-pages/$LANDING_SLUG/tailwind.output.css tailwind.output.css
