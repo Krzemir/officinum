@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F4EDDE; }
+  a { color: #3E6647; }
+  a:hover { color: #345239; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F4EDDE; color: #262B33; font-family: 'Source Sans 3', sans-serif;">
+
+  <!-- ===== 1. HERO ===== -->
+  <section data-screen-label="01 Hero" style="max-width: 1180px; margin: 0 auto; padding: clamp(48px, 8vw, 104px) 24px clamp(56px, 8vw, 112px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 6vw, 72px);">
+    <div style="flex: 1 1 440px; min-width: 300px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #5C6B3C;">Officinu<span style="color: #C87A28;">m</span></div>
+      <h1 style="margin: 0; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.14; letter-spacing: -0.01em; text-wrap: balance;">Finanse po rozwodzie. Przewodnik po polskich przepisach, bankach i urzędach.</h1>
+      <p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6; color: #454B54; max-width: 58ch;">171 stron o podziale majątku, kredycie hipotecznym, alimentach i produktach emerytalnych. Z arkuszami do wypełnienia, wzorami pism i wykazem źródeł do samodzielnego sprawdzenia.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: baseline; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="color: #3E6647; font-weight: 700;">✓</span><span><strong>10 rozdziałów</strong>, każdy z listą kontrolną i wykazem podstaw prawnych</span></div>
+        <div style="display: flex; align-items: baseline; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="color: #3E6647; font-weight: 700;">✓</span><span><strong>Załącznik A:</strong> 11 checklist, arkuszy i wzorów pism</span></div>
+        <div style="display: flex; align-items: baseline; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="color: #3E6647; font-weight: 700;">✓</span><span><strong>Załącznik B:</strong> akty prawne, orzecznictwo i instytucje w jednym wykazie</span></div>
+      </div>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; justify-content: center;">
+          <div style="position: relative; width: min(320px, 100%); aspect-ratio: 6 / 7;">
+            <img src="uploads/Addon%20B.png" alt="Załącznik B: Lista źródeł" style="position: absolute; top: 4%; right: 0; width: 46%; border-radius: 4px; box-shadow: 0 8px 24px rgba(38,43,51,0.16); transform: rotate(5deg);">
+            <img src="uploads/addon%20A.png" alt="Załącznik A: Checklisty i wzory dokumentów" style="position: absolute; bottom: 0; right: 8%; width: 46%; border-radius: 4px; box-shadow: 0 8px 24px rgba(38,43,51,0.16); transform: rotate(-3deg);">
+            <img src="uploads/okladka.png" alt="Okładka e-booka Finanse po rozwodzie" style="position: absolute; top: 6%; left: 0; width: 60%; border-radius: 4px; box-shadow: 0 16px 40px rgba(38,43,51,0.26); transform: rotate(-2deg);">
+          </div>
+        </div>
+      </sc-if>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline; gap: 14px;">
+          <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 58px; color: #A9691F; line-height: 1;">{{ cenaPremierowa }}</span>
+          <span style="font-size: 27px; color: #8A8578; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: #A9691F;">{{ cenaRegularna }}</span>
+        </div>
+        <div style="font-size: 15px; line-height: 1.5; color: #6B6353; max-width: 48ch;">{{ terminOferty }}</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; max-width: 460px;">
+        <a href="#koszyk" style="display: block; box-sizing: border-box; width: 100%; padding: 18px 24px; background: #3E6647; color: #FBF7EC; text-align: center; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; box-shadow: 0 2px 6px rgba(38,43,51,0.18); transition: background 0.15s, transform 0.1s, box-shadow 0.15s;"
+           style-hover="background: #345239; color: #FBF7EC; box-shadow: 0 4px 12px rgba(38,43,51,0.22); transform: translateY(-1px);"
+           style-active="background: #2C4731; transform: translateY(1px); box-shadow: 0 1px 3px rgba(38,43,51,0.2);">{{ tekstCta }}</a>
+        <div style="font-size: 13.5px; line-height: 1.5; color: #8A8578; text-align: center;">PDF i EPUB. Dostęp od razu po zakupie. Płatność obsługuje zewnętrzna platforma sprzedaży.</div>
+      </div>
+    </div>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="flex: 0 1 420px; min-width: 300px; display: flex; justify-content: center;">
+        <div style="position: relative; width: min(400px, 100%); aspect-ratio: 6 / 7;">
+          <img src="uploads/Addon%20B.png" alt="Załącznik B: Lista źródeł" style="position: absolute; top: 4%; right: 0; width: 46%; border-radius: 4px; box-shadow: 0 8px 24px rgba(38,43,51,0.16); transform: rotate(5deg);">
+          <img src="uploads/addon%20A.png" alt="Załącznik A: Checklisty i wzory dokumentów" style="position: absolute; bottom: 0; right: 8%; width: 46%; border-radius: 4px; box-shadow: 0 8px 24px rgba(38,43,51,0.16); transform: rotate(-3deg);">
+          <img src="uploads/okladka.png" alt="Okładka e-booka Finanse po rozwodzie" style="position: absolute; top: 6%; left: 0; width: 60%; border-radius: 4px; box-shadow: 0 16px 40px rgba(38,43,51,0.26); transform: rotate(-2deg);">
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <!-- ===== 2. PASEK ZAUFANIA ===== -->
+  <section data-screen-label="02 Pasek zaufania" style="background: #EFE7D3; border-top: 1px solid #E2D8C2; border-bottom: 1px solid #E2D8C2;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 44px 24px; display: flex; flex-wrap: wrap; gap: 36px;">
+      <div style="flex: 1 1 260px; min-width: 240px;">
+        <div style="width: 34px; height: 3px; background: #5C6B3C; border-radius: 2px; margin-bottom: 14px;"></div>
+        <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 19px; color: #262B33;">Stan prawny na 2026 rok</div>
+        <div style="font-size: 15px; line-height: 1.5; margin-top: 6px; color: #6B6353;">Uwzględnia zmiany z lat 2023 do 2025, także te pomijane w popularnych poradnikach.</div>
+      </div>
+      <div style="flex: 1 1 260px; min-width: 240px;">
+        <div style="width: 34px; height: 3px; background: #5C6B3C; border-radius: 2px; margin-bottom: 14px;"></div>
+        <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 19px; color: #262B33;">Polskie realia</div>
+        <div style="font-size: 15px; line-height: 1.5; margin-top: 6px; color: #6B6353;">Polskie sądy, polskie banki, polskie formularze i terminy.</div>
+      </div>
+      <div style="flex: 1 1 260px; min-width: 240px;">
+        <div style="width: 34px; height: 3px; background: #5C6B3C; border-radius: 2px; margin-bottom: 14px;"></div>
+        <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 19px; color: #262B33;">Z podaniem źródła</div>
+        <div style="font-size: 15px; line-height: 1.5; margin-top: 6px; color: #6B6353;">Każdy rozdział kończy się wykazem podstaw prawnych.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. PROBLEM ===== -->
+  <section data-screen-label="03 Problem" style="max-width: 780px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+    <h2 style="margin: 0 0 24px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2;">Rozwód kończy się wyrokiem. Finanse kończą się dużo później.</h2>
+    <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.6; color: #454B54;">Wyrok rozwodowy rozstrzyga o małżeństwie. Nie rozstrzyga o kredycie hipotecznym, który po rozwodzie nadal wiąże obie strony z bankiem. Nie dzieli kont emerytalnych. Nie mówi bankowi, jak liczyć zdolność kredytową osoby płacącej alimenty. Każdą z tych spraw trzeba załatwić osobno, a część z nich ma ustawowe terminy.</p>
+    <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.6; color: #454B54;">Wiedza na ten temat jest w Polsce rozproszona. Część znajduje się w orzecznictwie Sądu Najwyższego, część w rekomendacjach Komisji Nadzoru Finansowego, część w ustawie o IKE i IKZE, część w wewnętrznych procedurach banków. Poradniki w internecie bywają nieaktualne albo przepisane jeden od drugiego. Godzina u prawnika rodzinnego kosztuje zwykle 300 do 500 zł i starcza na jeden temat.</p>
+    <p style="margin: 0 0 32px; font-size: 17px; line-height: 1.6; color: #454B54;">Ten przewodnik zbiera całość w jednym miejscu i układa w kolejności, w jakiej te sprawy trzeba załatwiać.</p>
+    <div style="background: #FBF7EC; border-left: 4px solid #A9691F; border-radius: 0 6px 6px 0; padding: 24px 28px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #A9691F;">Trzy konkrety z książki</div>
+      <div style="font-size: 16.5px; line-height: 1.55; color: #262B33;">Przy podziale majątku wartość mieszkania ustala się rynkowo, bez odejmowania salda kredytu. Intuicja podpowiada odwrotnie. Rozdział 3 pokazuje pełne wyliczenie na przykładzie.</div>
+      <div style="border-top: 1px solid #E2D8C2; padding-top: 18px; font-size: 16.5px; line-height: 1.55; color: #262B33;">Środki zgromadzone na koncie OIPE weszły do katalogu majątku wspólnego 26 września 2023 roku. Produktów emerytalnych podlegających podziałowi jest siedem.</div>
+      <div style="border-top: 1px solid #E2D8C2; padding-top: 18px; font-size: 16.5px; line-height: 1.55; color: #262B33;">Tablica alimentacyjna, o której było głośno w lipcu 2025 roku, została wycofana. Sądy orzekają na podstawie art. 135 § 1 Kodeksu rodzinnego i opiekuńczego.</div>
+    </div>
+  </section>
+
+  <!-- ===== 4. CO DOSTAJESZ ===== -->
+  <section data-screen-label="04 Co dostajesz" style="background: #FBF7EC; border-top: 1px solid #E2D8C2; border-bottom: 1px solid #E2D8C2;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+      <h2 style="margin: 0 0 12px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center;">Trzy elementy, jeden zakup</h2>
+      <p style="margin: 0 auto 48px; font-size: 17px; line-height: 1.6; color: #6B6353; text-align: center; max-width: 52ch;">Przewodnik do czytania, załącznik do wypełniania i załącznik do sprawdzania.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch;">
+        <div style="flex: 1.1 1 400px; min-width: 300px; background: #F4EDDE; border: 1px solid #E2D8C2; border-radius: 10px; padding: 36px; box-shadow: 0 4px 16px rgba(38,43,51,0.06); display: flex; flex-direction: column; gap: 20px;">
+          <img src="uploads/okladka.png" alt="Okładka przewodnika" style="width: min(220px, 64%); align-self: center; border-radius: 4px; box-shadow: 0 14px 32px rgba(38,43,51,0.22);">
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 24px;">Przewodnik, 171 stron</div>
+          <div style="font-size: 16px; line-height: 1.6; color: #454B54;">Dziesięć rozdziałów prowadzących przez cały proces: od pierwszych trzydziestu dni po wyroku, przez podział majątku i kredyt hipoteczny, po plan finansowy na dwanaście miesięcy. Każdy rozdział zamyka lista kontrolna i wykaz podstaw prawnych.</div>
+          <div style="margin-top: auto; font-size: 14.5px; color: #6B6353;">Formaty PDF i EPUB.</div>
+        </div>
+        <div style="flex: 1 1 400px; min-width: 300px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="flex: 1; background: #F4EDDE; border: 1px solid #E2D8C2; border-radius: 10px; padding: 28px; box-shadow: 0 4px 16px rgba(38,43,51,0.06); display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap;">
+            <img src="uploads/addon%20A.png" alt="Okładka Załącznika A" style="width: 104px; border-radius: 3px; box-shadow: 0 6px 16px rgba(38,43,51,0.16);">
+            <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 10px;">
+              <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 21px;">Załącznik A, 11 narzędzi</div>
+              <div style="font-size: 15.5px; line-height: 1.6; color: #454B54;">Checklisty, arkusze do wypełnienia i wzory pism do wydrukowania albo skopiowania. Między innymi arkusz inwentaryzacji majątku obejmujący wszystkie siedem produktów emerytalnych, arkusz budżetu z miejscem na wyliczenie wskaźnika DStI oraz pięć wzorów wniosków do banku, funduszu emerytalnego, ZUS i instytucji prowadzącej konto.</div>
+            </div>
+          </div>
+          <div style="flex: 1; background: #F4EDDE; border: 1px solid #E2D8C2; border-radius: 10px; padding: 28px; box-shadow: 0 4px 16px rgba(38,43,51,0.06); display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap;">
+            <img src="uploads/Addon%20B.png" alt="Okładka Załącznika B" style="width: 104px; border-radius: 3px; box-shadow: 0 6px 16px rgba(38,43,51,0.16);">
+            <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 10px;">
+              <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 21px;">Załącznik B, źródła</div>
+              <div style="font-size: 15.5px; line-height: 1.6; color: #454B54;">Akty prawne z numerami Dziennika Ustaw i identyfikatorami ISAP, orzeczenia Sądu Najwyższego z sygnaturami, instytucje publiczne, rejestry, wyszukiwarki i telefony wsparcia. Pozwala sprawdzić treść przewodnika u źródła i szukać dalej przy nietypowej sytuacji.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. CZTERY WYRÓŻNIKI ===== -->
+  <section data-screen-label="05 Wyrozniki" style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+    <h2 style="margin: 0 0 12px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center;">Cztery rzeczy, które odróżniają ten przewodnik</h2>
+    <p style="margin: 0 auto 48px; font-size: 17px; line-height: 1.6; color: #6B6353; text-align: center; max-width: 56ch;">Materiałów o rozwodzie w sieci jest sporo. Kłopot zaczyna się przy sprawdzaniu, ile z nich jest aktualnych.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 24px;">
+      <sc-for list="{{ wyrozniki }}" as="w" hint-placeholder-count="4">
+        <div style="position: relative; background: #FBF7EC; border: 1px solid #E2D8C2; border-radius: 10px; padding: 32px 28px 24px; overflow: hidden;">
+          <div style="position: absolute; top: -18px; right: 8px; font-family: 'Spectral', serif; font-weight: 700; font-size: 110px; line-height: 1; color: #EDE3CD;">{{ w.nr }}</div>
+          <div style="position: relative; display: flex; flex-direction: column; gap: 12px; height: 100%; box-sizing: border-box;">
+            <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 21px;">{{ w.tytul }}</div>
+            <div style="font-size: 16px; line-height: 1.6; color: #454B54;">{{ w.opis }}</div>
+            <div style="border-top: 1px solid #E2D8C2; padding-top: 12px; margin-top: auto; font-style: italic; font-size: 15px; line-height: 1.5; color: #6B6353;">{{ w.dowod }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== 6. CO JEST W ŚRODKU ===== -->
+  <section data-screen-label="06 Spis tresci" style="background: #FBF7EC; border-top: 1px solid #E2D8C2; border-bottom: 1px solid #E2D8C2;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+      <h2 style="margin: 0 0 40px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center;">Co jest w środku, rozdział po rozdziale</h2>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; flex-direction: column; border-top: 1px solid #E2D8C2;">
+          <sc-for list="{{ rozdzialy }}" as="r" hint-placeholder-count="10">
+            <div style="border-bottom: 1px solid #E2D8C2;">
+              <button onClick="{{ r.toggle }}" style="display: flex; align-items: baseline; gap: 14px; width: 100%; padding: 16px 4px; background: none; border: none; cursor: pointer; text-align: left; font-family: inherit; color: #262B33;">
+                <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 15px; color: #A9691F; min-width: 24px;">{{ r.nr }}</span>
+                <span style="flex: 1; font-family: 'Spectral', serif; font-weight: 600; font-size: 17.5px; line-height: 1.35;">{{ r.tytul }}</span>
+                <span style="font-size: 20px; color: #8A8578; font-weight: 400;">{{ r.znak }}</span>
+              </button>
+              <sc-if value="{{ r.open }}" hint-placeholder-val="{{ false }}">
+                <div style="padding: 0 4px 18px 38px; font-size: 16px; line-height: 1.6; color: #454B54;">{{ r.opis }}</div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 8px 56px;">
+          <sc-for list="{{ rozdzialy }}" as="r" hint-placeholder-count="10">
+            <div style="display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid #E2D8C2;">
+              <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 16px; color: #A9691F; min-width: 26px;">{{ r.nr }}</span>
+              <span style="flex: 1;">
+                <span style="display: block; font-family: 'Spectral', serif; font-weight: 600; font-size: 18.5px; line-height: 1.3;">{{ r.tytul }}</span>
+                <span style="display: block; font-size: 15.5px; line-height: 1.55; color: #454B54; margin-top: 6px;">{{ r.opis }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ===== 7. ZAŁĄCZNIK A ===== -->
+  <section data-screen-label="07 Zalacznik A" style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+    <h2 style="margin: 0 0 12px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2;">Załącznik A: jedenaście narzędzi do wypełnienia</h2>
+    <p style="margin: 0 0 40px; font-size: 17px; line-height: 1.6; color: #6B6353; max-width: 60ch;">Ta część służy do wydrukowania i użycia przy biurku.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(32px, 5vw, 64px); align-items: flex-start;">
+      <div style="flex: 1 1 400px; min-width: 300px; display: flex; flex-direction: column;">
+        <sc-for list="{{ narzedzia }}" as="n" hint-placeholder-count="11">
+          <div style="display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid #E2D8C2; font-size: 16px; line-height: 1.5;">
+            <span style="font-weight: 700; color: #5C6B3C; min-width: 36px; font-size: 14.5px;">{{ n.kod }}</span>
+            <span style="color: #34393F;">{{ n.nazwa }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 300px; display: flex; justify-content: center;">
+        <div style="width: min(460px, 100%); background: #FBF7EC; border: 1px solid #E2D8C2; border-radius: 6px; box-shadow: 0 12px 32px rgba(38,43,51,0.14); transform: rotate(1deg); padding: 28px; box-sizing: border-box;">
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #5C6B3C;">Załącznik A · arkusz A3</div>
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 20px; margin: 8px 0 18px;">Inwentaryzacja majątku wspólnego</div>
+          <div style="display: grid; grid-template-columns: 1.6fr 1fr 0.9fr; gap: 0; font-size: 13.5px;">
+            <div style="padding: 8px 6px; border-bottom: 2px solid #262B33; font-weight: 700;">Składnik</div>
+            <div style="padding: 8px 6px; border-bottom: 2px solid #262B33; font-weight: 700; text-align: right;">Wartość</div>
+            <div style="padding: 8px 6px; border-bottom: 2px solid #262B33; font-weight: 700; text-align: right;">Status</div>
+            <div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2;">Mieszkanie (KW)</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right;">620 000 zł</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right; color: #5C6B3C;">wspólne</div>
+            <div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2;">Kredyt hipoteczny (saldo)</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right;">−318 400 zł</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right; color: #5C6B3C;">wspólne</div>
+            <div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2;">IKE, IKZE, PPK, OFE…</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right;">osobna tabela</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right; color: #A9691F;">7 pozycji</div>
+            <div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2;">Oszczędności</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right;">57 400 zł</div><div style="padding: 9px 6px; border-bottom: 1px solid #E2D8C2; text-align: right; color: #A9691F;">do ustalenia</div>
+            <div style="padding: 10px 6px; font-weight: 700;">Majątek netto</div><div style="padding: 10px 6px; font-weight: 700; text-align: right;">…</div><div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="margin: 40px 0 0; font-size: 14.5px; line-height: 1.55; color: #8A8578; max-width: 72ch;">Wzory pism są punktem wyjścia, a nie ostateczną formą dokumentu. Przy sprawach wagi istotnej przewodnik odsyła do konsultacji ze specjalistą.</p>
+  </section>
+
+  <!-- ===== 8. ZAŁĄCZNIK B ===== -->
+  <section data-screen-label="08 Zalacznik B" style="background: #FBF7EC; border-top: 1px solid #E2D8C2; border-bottom: 1px solid #E2D8C2;">
+    <div style="max-width: 780px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+      <h2 style="margin: 0 0 24px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2;">Załącznik B: sprawdź wszystko u źródła</h2>
+      <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.6; color: #454B54;">Każdy rozdział kończy się wykazem podstaw prawnych, a Załącznik B zbiera je w jedną bazę podzieloną na pięć części: akty prawne z numerami Dziennika Ustaw i identyfikatorami ISAP, orzecznictwo Sądu Najwyższego z sygnaturami, instytucje publiczne i regulatorów, statystyki oraz rejestry, wyszukiwarki i telefony wsparcia.</p>
+      <p style="margin: 0 0 32px; font-size: 17px; line-height: 1.6; color: #454B54;">Załącznik ma dwa zastosowania. Pozwala zweryfikować dowolną tezę u źródła i pozwala szukać dalej, gdy sytuacja wykracza poza to, co opisuje przewodnik.</p>
+      <div style="background: #262B33; color: #D8D3C6; border-radius: 8px; padding: 28px 32px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A26B; margin-bottom: 12px;">O aktualności danych</div>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6;">Teksty jednolite ustaw, rekomendacje KNF, progi podatkowe i kwoty świadczeń bywają zmieniane. Przewodnik podaje stan na dzień sporządzenia i w każdym takim miejscu wskazuje, gdzie sprawdzić najnowszą wersję przed poważną decyzją.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. PODGLĄD ===== -->
+  <section data-screen-label="09 Podglad" style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+    <h2 style="margin: 0 0 12px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center;">Zajrzyj do środka</h2>
+    <p style="margin: 0 auto 44px; font-size: 17px; line-height: 1.6; color: #6B6353; text-align: center; max-width: 52ch;">Trzy fragmenty pokazujące, jak wygląda treść.</p>
+    <div style="display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px;">
+      <div style="flex: 1 0 min(300px, 84vw); scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: #FBF7EC; border: 1px solid #E2D8C2; border-radius: 6px; box-shadow: 0 8px 24px rgba(38,43,51,0.1); padding: 26px; aspect-ratio: 4 / 5; box-sizing: border-box; overflow: hidden;">
+          <div style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8578;">Rozdział 3 · przykład rachunkowy</div>
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 17px; line-height: 1.3; margin: 12px 0;">Spłata przy przejęciu mieszkania</div>
+          <div style="font-size: 12.5px; line-height: 1.9; color: #454B54;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2D8C2;"><span>Wartość rynkowa mieszkania</span><span>620 000 zł</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2D8C2;"><span>Udział każdej ze stron</span><span>310 000 zł</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E2D8C2;"><span>Saldo kredytu do przejęcia</span><span>318 400 zł</span></div>
+            <div style="display: flex; justify-content: space-between; font-weight: 700;"><span>Spłata drugiej strony</span><span>…</span></div>
+          </div>
+          <div style="font-size: 11.5px; line-height: 1.6; color: #8A8578; margin-top: 12px;">Pełne wyliczenie, wraz z rolą salda kredytu, prowadzone jest krok po kroku w rozdziale.</div>
+        </div>
+        <div style="font-size: 14.5px; line-height: 1.5; color: #6B6353; text-align: center; font-style: italic;">Mechanizmy prawne pokazane są na liczbach.</div>
+      </div>
+      <div style="flex: 1 0 min(300px, 84vw); scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: #FBF7EC; border: 1px solid #E2D8C2; border-radius: 6px; box-shadow: 0 8px 24px rgba(38,43,51,0.1); padding: 26px; aspect-ratio: 4 / 5; box-sizing: border-box; overflow: hidden;">
+          <div style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8578;">Rozdział 7 · tabela progów</div>
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 17px; line-height: 1.3; margin: 12px 0;">Wskaźnik DStI w ocenie banku</div>
+          <div style="font-size: 12.5px; line-height: 1.9; color: #454B54;">
+            <div style="display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid #E2D8C2;"><span>do 40%</span><span style="color: #3E6647; font-weight: 600;">poziom bezpieczny</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid #E2D8C2;"><span>40 do 50%</span><span style="color: #A9691F; font-weight: 600;">wymaga uzasadnienia</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid #E2D8C2;"><span>powyżej 50%</span><span>zgoda rzadka</span></div>
+          </div>
+          <div style="font-size: 11.5px; line-height: 1.6; color: #8A8578; margin-top: 12px;">Rozdział podaje definicję, wzór i wyliczenie wskaźnika oraz wpływ alimentów i wspólnego kredytu na jego wysokość.</div>
+        </div>
+        <div style="font-size: 14.5px; line-height: 1.5; color: #6B6353; text-align: center; font-style: italic;">Progi, instytucje i formularze podane z nazwy.</div>
+      </div>
+      <div style="flex: 1 0 min(300px, 84vw); scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: #FBF7EC; border: 1px solid #E2D8C2; border-radius: 6px; box-shadow: 0 8px 24px rgba(38,43,51,0.1); padding: 26px; aspect-ratio: 4 / 5; box-sizing: border-box; overflow: hidden;">
+          <div style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8578;">Koniec rozdziału · lista kontrolna</div>
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 17px; line-height: 1.3; margin: 12px 0;">Zanim przejdziesz dalej</div>
+          <div style="font-size: 12.5px; line-height: 1.75; color: #454B54; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 8px;"><span style="color: #3E6647; font-weight: 700;">☐</span><span>Ustalona wartość rynkowa mieszkania (operat albo trzy wyceny)</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #3E6647; font-weight: 700;">☐</span><span>Znane saldo kredytu na dzień podziału</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #3E6647; font-weight: 700;">☐</span><span>Wybrana jedna z trzech ścieżek wyjścia z kredytu</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #3E6647; font-weight: 700;">☐</span><span>Sprawdzone podstawy prawne z wykazu na końcu rozdziału</span></div>
+          </div>
+        </div>
+        <div style="font-size: 14.5px; line-height: 1.5; color: #6B6353; text-align: center; font-style: italic;">Każdy rozdział zamyka lista kontrolna.</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 44px;">
+      <a href="uploads/fragment-rozdzialu.pdf" target="_blank" style="display: block; box-sizing: border-box; width: min(460px, 100%); padding: 15px 24px; background: transparent; border: 1.5px solid #3E6647; color: #3E6647; text-align: center; text-decoration: none; font-size: 16.5px; font-weight: 700; border-radius: 8px; transition: background 0.15s;"
+         style-hover="background: rgba(62,102,71,0.08); color: #345239;"
+         style-active="background: rgba(62,102,71,0.14);">Pobierz fragment rozdziału (PDF)</a>
+      <a href="#koszyk" style="display: block; box-sizing: border-box; width: min(460px, 100%); padding: 18px 24px; background: #3E6647; color: #FBF7EC; text-align: center; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; box-shadow: 0 2px 6px rgba(38,43,51,0.18); transition: background 0.15s, transform 0.1s, box-shadow 0.15s;"
+         style-hover="background: #345239; color: #FBF7EC; box-shadow: 0 4px 12px rgba(38,43,51,0.22); transform: translateY(-1px);"
+         style-active="background: #2C4731; transform: translateY(1px); box-shadow: 0 1px 3px rgba(38,43,51,0.2);">{{ tekstCta }}</a>
+    </div>
+  </section>
+
+  <!-- ===== 10. DLA KOGO ===== -->
+  <section data-screen-label="10 Dla kogo" style="background: #FBF7EC; border-top: 1px solid #E2D8C2; border-bottom: 1px solid #E2D8C2;">
+    <div style="max-width: 1080px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+      <h2 style="margin: 0 0 40px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center;">Sprawdź, czy to przewodnik dla Ciebie</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch;">
+        <div style="flex: 1 1 340px; background: #EDF2E4; border: 1px solid #C9D6BC; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 20px; color: #2C4731;">Przewodnik będzie przydatny</div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>w trakcie sprawy rozwodowej i po prawomocnym wyroku</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>gdy w grze jest wspólne mieszkanie z kredytem hipotecznym</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>przy podziale IKE, IKZE, PPK i pozostałych produktów emerytalnych</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>gdy alimenty wchodzą w rachubę po którejkolwiek stronie</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>przy planowaniu własnego kredytu w perspektywie kilku lat</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>przy porządkowaniu finansów kilka lat po rozwodzie</span></div>
+        </div>
+        <div style="flex: 1 1 340px; background: #F1EDE3; border: 1px solid #E2D8C2; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: 20px; color: #5A5F66;">Przewodnik nie obejmuje</div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55; color: #454B54;"><span style="color: #8A8578;">•</span><span>gotowych pozwów i pism procesowych przygotowanych pod konkretną sprawę</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55; color: #454B54;"><span style="color: #8A8578;">•</span><span>prowadzenia sprawy spornej, w której strony nie potrafią się porozumieć</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55; color: #454B54;"><span style="color: #8A8578;">•</span><span>podziału udziałów w spółkach i rozbudowanych struktur majątkowych</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55; color: #454B54;"><span style="color: #8A8578;">•</span><span>spraw z elementem zagranicznym, w których stosuje się prawo innego państwa</span></div>
+          <div style="display: flex; gap: 12px; font-size: 16.5px; line-height: 1.55; color: #454B54;"><span style="color: #8A8578;">•</span><span>indywidualnej porady prawnej, podatkowej i rekomendacji inwestycyjnych</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 11. OFERTA ===== -->
+  <section data-screen-label="11 Oferta" style="background: #262B33;">
+    <div style="max-width: 980px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 24px;">
+      <h2 style="margin: 0 0 36px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center; color: #FBF7EC;">Cena premierowa do 6 września</h2>
+      <div style="background: #FBF7EC; border-radius: 14px; box-shadow: 0 24px 64px rgba(0,0,0,0.35); padding: clamp(28px, 5vw, 56px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 48px); align-items: center;">
+        <div style="flex: 0 1 240px; min-width: 180px; display: flex; justify-content: center;">
+          <img src="uploads/okladka.png" alt="Okładka e-booka Finanse po rozwodzie" style="width: min(220px, 100%); border-radius: 4px; box-shadow: 0 16px 40px rgba(38,43,51,0.3); transform: rotate(-2deg);">
+        </div>
+        <div style="flex: 1 1 380px; min-width: 280px; display: flex; flex-direction: column; gap: 22px;">
+          <div>
+            <div style="font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(24px, 3vw, 30px); line-height: 1.2;">Finanse po rozwodzie</div>
+            <div style="font-size: 16px; line-height: 1.5; color: #6B6353; margin-top: 6px;">Praktyczny przewodnik: podział majątku, kredyt hipoteczny, alimenty, emerytury</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.5;">
+            <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #5C6B3C;">W pakiecie</div>
+            <div style="display: flex; gap: 11px;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>Przewodnik, 10 rozdziałów, 171 stron</span></div>
+            <div style="display: flex; gap: 11px;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>Załącznik A, 11 checklist, arkuszy i wzorów pism</span></div>
+            <div style="display: flex; gap: 11px;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>Załącznik B, wykaz źródeł prawa i orzecznictwa</span></div>
+            <div style="display: flex; gap: 11px;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>Formaty PDF i EPUB, oba w cenie</span></div>
+            <div style="display: flex; gap: 11px;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>Dostęp od razu po zakupie, pliki zostają na stałe</span></div>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 62px; color: #A9691F; line-height: 1;">{{ cenaPremierowa }}</span>
+            <span style="font-size: 27px; color: #8A8578; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: #A9691F;">{{ cenaRegularna }}</span>
+            <span style="font-size: 15px; color: #8A8578;">cena regularna</span>
+          </div>
+          <div style="background: #F6E8D2; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.5; font-weight: 600; color: #7A4E1A;">{{ terminOfertyOferta }}</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#koszyk" style="display: block; box-sizing: border-box; width: 100%; padding: 18px 24px; background: #3E6647; color: #FBF7EC; text-align: center; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; box-shadow: 0 2px 6px rgba(38,43,51,0.18); transition: background 0.15s, transform 0.1s, box-shadow 0.15s;"
+               style-hover="background: #345239; color: #FBF7EC; box-shadow: 0 4px 12px rgba(38,43,51,0.22); transform: translateY(-1px);"
+               style-active="background: #2C4731; transform: translateY(1px); box-shadow: 0 1px 3px rgba(38,43,51,0.2);">{{ tekstCta }}</a>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #8A8578; text-align: center;">Przejdziesz do zewnętrznej platformy sprzedaży, która obsługuje płatność i dostarcza pliki.</div>
+          </div>
+        </div>
+      </div>
+      <p style="margin: 28px auto 0; max-width: 62ch; text-align: center; font-size: 15px; line-height: 1.6; color: #9BA0A8;">Dla porównania: godzina konsultacji u prawnika rodzinnego kosztuje zwykle 300 do 500 zł i starcza na jeden temat.</p>
+    </div>
+  </section>
+
+  <!-- ===== 12. FAQ ===== -->
+  <section data-screen-label="12 FAQ" style="max-width: 780px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px;">
+    <h2 style="margin: 0 0 36px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center;">Pytania, które warto zadać przed zakupem</h2>
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #DACFB6;">
+      <sc-for list="{{ faq }}" as="f" hint-placeholder-count="8">
+        <div style="border-bottom: 1px solid #DACFB6;">
+          <button onClick="{{ f.toggle }}" style="display: flex; align-items: baseline; gap: 16px; width: 100%; padding: 20px 4px; background: none; border: none; cursor: pointer; text-align: left; font-family: inherit; color: #262B33;">
+            <span style="flex: 1; font-family: 'Spectral', serif; font-weight: 600; font-size: 18.5px; line-height: 1.35;">{{ f.pytanie }}</span>
+            <span style="font-size: 22px; color: #8A8578; font-weight: 400;">{{ f.znak }}</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding: 0 4px 22px; font-size: 16.5px; line-height: 1.6; color: #454B54;">{{ f.odpowiedz }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== 13. OSTATNIE CTA ===== -->
+  <section data-screen-label="13 Ostatnie CTA" style="background: #262B33; color: #FBF7EC;">
+    <div style="max-width: 680px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center;">
+      <h2 style="margin: 0; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.18; text-wrap: balance;">171 stron, 11 narzędzi, wykaz źródeł</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B4B0A4; max-width: 54ch;">Finansowa strona rozwodu w jednym dokumencie, ułożona w kolejności działania, z listami kontrolnymi, arkuszami do wypełnienia i wskazaniem przepisów przy każdym rozdziale.</p>
+      <div style="display: flex; flex-direction: column; gap: 6px; align-items: center;">
+        <div style="display: flex; align-items: baseline; gap: 14px;">
+          <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 58px; color: #DCA75B; line-height: 1;">{{ cenaPremierowa }}</span>
+          <span style="font-size: 27px; color: #8A8D93; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: #DCA75B;">{{ cenaRegularna }}</span>
+        </div>
+        <div style="font-size: 15px; color: #9BA0A8;">{{ terminOfertyKrotki }}</div>
+      </div>
+      <a href="#koszyk" style="display: block; box-sizing: border-box; width: min(460px, 100%); padding: 18px 24px; background: #3E6647; color: #FBF7EC; text-align: center; text-decoration: none; font-size: 18px; font-weight: 700; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: background 0.15s, transform 0.1s, box-shadow 0.15s;"
+         style-hover="background: #345239; color: #FBF7EC; box-shadow: 0 4px 12px rgba(0,0,0,0.35); transform: translateY(-1px);"
+         style-active="background: #2C4731; transform: translateY(1px); box-shadow: 0 1px 3px rgba(0,0,0,0.3);">{{ tekstCta }}</a>
+      <div style="font-size: 13.5px; color: #8A8D93;">PDF i EPUB. Dostęp od razu po zakupie.</div>
+    </div>
+  </section>
+
+  <!-- ===== 14. STOPKA ===== -->
+  <footer data-screen-label="14 Stopka" style="background: #1D2127; color: #8A8D93;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 48px 24px 40px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="font-family: 'Spectral', serif; font-weight: 700; font-size: 19px; letter-spacing: 0.08em; text-transform: uppercase; color: #D8D3C6;">Officinu<span style="color: #C87A28;">m</span></div>
+      <p style="margin: 0; font-size: 13px; line-height: 1.6;">Publikacja ma charakter edukacyjny i informacyjny. Nie stanowi porady prawnej, podatkowej ani rekomendacji inwestycyjnej w rozumieniu obowiązujących przepisów. Przed podjęciem decyzji o skutkach majątkowych warto skonsultować się z prawnikiem, doradcą podatkowym albo doradcą kredytowym.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px;">
+        <a href="#regulamin" style="color: #B4B0A4; text-decoration: none;" style-hover="color: #FBF7EC; text-decoration: underline;">Regulamin</a>
+        <a href="#prywatnosc" style="color: #B4B0A4; text-decoration: none;" style-hover="color: #FBF7EC; text-decoration: underline;">Polityka prywatności</a>
+        <a href="#kontakt" style="color: #B4B0A4; text-decoration: none;" style-hover="color: #FBF7EC; text-decoration: underline;">Kontakt</a>
+      </div>
+      <div style="font-size: 13px; color: #5F646C;">© 2026 Officinum. Wszystkie prawa zastrzeżone.</div>
+    </div>
+  </footer>
+
+  <!-- Sticky bar (mobile, po przewinięciu hero) -->
+  <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #FBF7EC; border-top: 1px solid #DACFB6; box-shadow: 0 -4px 16px rgba(38,43,51,0.12); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 8px;">
+        <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 22px; color: #A9691F;">{{ cenaPremierowa }}</span>
+        <span style="font-size: 13px; color: #8A8578; text-decoration: line-through;">{{ cenaRegularna }}</span>
+      </div>
+      <a href="#koszyk" style="display: block; padding: 12px 22px; background: #3E6647; color: #FBF7EC; text-decoration: none; font-size: 15px; font-weight: 700; border-radius: 7px; white-space: nowrap;"
+         style-hover="background: #345239; color: #FBF7EC;"
+         style-active="background: #2C4731;">Kup przewodnik</a>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;cenaPremierowa&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;69,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;cenaRegularna&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;89,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa obowiązuje do 6 września 2026. Od 7 września cena regularna 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa obowiązuje do niedzieli 6 września 2026 włącznie. Od 7 września przewodnik będzie dostępny w cenie regularnej 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa do 6 września 2026. Od 7 września 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
+}">
+class Component extends DCLogic {
+  state = { w: 1200, y: 0, openChapter: -1, openFaq: 0 };
+  componentDidMount() {
+    this._onR = () => this.setState({ w: window.innerWidth });
+    this._onS = () => this.setState({ y: window.scrollY });
+    window.addEventListener('resize', this._onR);
+    window.addEventListener('scroll', this._onS, { passive: true });
+    this._onR();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onR);
+    window.removeEventListener('scroll', this._onS);
+  }
+  renderVals() {
+    const cena = this.props.cenaPremierowa ?? "69,90 zł";
+    const isMobile = this.state.w < 760;
+    const rozdzialyDane = [
+      ["Pierwsze 30 dni po wyroku", "Dwanaście ruchów w kolejności, w jakiej trzeba je wykonać, z informacją, ile zajmują, jakich dokumentów wymagają i czym grozi ich pominięcie."],
+      ["Co dzielimy, czego nie dzielimy", "Co wchodzi do majątku wspólnego, a co do osobistego, jak działa zasada równych udziałów i jak rozliczyć nakłady. Z pełnym przykładem rachunkowym."],
+      ["Kredyt hipoteczny, trzy ścieżki, jedna decyzja", "Dlaczego sąd dzieli aktywa, a nie długi, dlaczego bank nie jest stroną postępowania i jak wyglądają trzy realne drogi wyjścia z kredytu, z kosztami i kolejnością kroków."],
+      ["Emerytury bez kosztów podatkowych: jak podzielić IKE, IKZE i resztę", "Wszystkie siedem produktów po kolei, sposób podziału każdego z nich i terminy wniosków. Z osobnym omówieniem wypłaty transferowej, która przy IKE i IKZE pozwala uniknąć podatku."],
+      ["Alimenty: stan prawny po wycofaniu tablicy", "Na czym opierają się sądy, jakie widełki orzekają w praktyce, dlaczego świadczenie 800+ nie obniża alimentów i jak zabezpieczyć klauzulę wykonalności."],
+      ["Budżet jednoosobowy po latach we dwoje", "Jak przemodelować budżet po zniknięciu korzyści skali, gdzie realnie szukać oszczędności i jak zbudować poduszkę bezpieczeństwa w nowej sytuacji."],
+      ["Zdolność kredytowa od zera: jak banki oceniają wniosek po rozwodzie", "Wskaźnik DStI z definicją, wzorem i wyliczeniem, wpływ alimentów, dzieci i wspólnego kredytu na jego wysokość oraz działania poprawiające zdolność w perspektywie 6 do 12 miesięcy."],
+      ["Plan finansowy na 12 miesięcy po rozwodzie", "Pięćdziesiąt zadań rozłożonych na trzy fazy, miesiąc po miesiącu, z odesłaniem do właściwych rozdziałów i przeglądem kontrolnym na koniec każdej fazy."],
+      ["Dziesięć błędów, które kosztują najwięcej", "Błędy uszeregowane według skali strat, od tych liczonych w setkach tysięcy po te liczone w tysiącach. Każdy z opisem konsekwencji i sposobem uniknięcia."],
+      ["Kiedy warto sięgać po pomoc specjalistów", "Pięciu specjalistów, przy każdym informacja, kiedy jest potrzebny, ile kosztuje jego konsultacja i jak się do niej przygotować. Na końcu sygnały ostrzegawcze."],
+    ];
+    const rozdzialy = rozdzialyDane.map(([tytul, opis], i) => ({
+      nr: String(i + 1).padStart(2, "0"), tytul, opis,
+      open: this.state.openChapter === i,
+      znak: this.state.openChapter === i ? "–" : "+",
+      toggle: () => this.setState(s => ({ openChapter: s.openChapter === i ? -1 : i })),
+    }));
+    const faqDane = [
+      ["Czy tego samego nie znajdę za darmo w internecie?", "Część znajdziesz, rozproszoną po kilkudziesięciu stronach, w różnym stanie aktualności i zwykle bez wskazania źródła. Kłopotem jest nie tyle dostęp do informacji, ile jej sprawdzenie i ułożenie w kolejności. Dobrym przykładem jest tablica alimentacyjna: wiele artykułów nadal opisuje ją jako obowiązującą, mimo że została wycofana. Przewodnik podaje stan aktualny i wskazuje przepisy, na których się opiera."],
+      ["Czy przewodnik zastąpi prawnika?", "Nie, i nigdzie tego nie obiecuje. Skraca natomiast pierwsze godziny konsultacji, które zwykle schodzą na wyjaśnianie podstaw. Rozdział 10 wskazuje sytuacje, w których pomoc prawnika jest konieczna, a Załącznik A zawiera listy pytań przygotowane pod pierwsze spotkanie."],
+      ["Czy przewodnik jest pisany pod kobiety, czy pod mężczyzn?", "Pod obie strony. Treść jest sformułowana neutralnie i opisuje sytuację obojga byłych małżonków, również tam, gdzie ich interesy są przeciwne, jak przy alimentach albo podziale mieszkania. Wiedza o tym, jak liczy druga strona, jest przydatna niezależnie od tego, po której się stoi."],
+      ["Moja sytuacja jest nietypowa. Czy to się przyda?", "Przewodnik obejmuje typowe polskie realia: etat lub działalność gospodarczą, wspólne mieszkanie z kredytem, dzieci, alimenty, konta emerytalne. Przy podziale udziałów w spółkach, majątku za granicą albo sprawach z elementem obcym pomoże zrozumieć mechanizmy ogólne, ale wymaga uzupełnienia o indywidualną poradę."],
+      ["Jak aktualne są informacje?", "Treść odzwierciedla stan prawny na 2026 rok, z uwzględnieniem zmian z lat 2023 do 2025: wejścia OIPE do katalogu majątku wspólnego, nowelizacji Rekomendacji S obowiązującej banki od lipca 2024 oraz wycofania tablicy alimentacyjnej. Przewodnik podaje datę sporządzenia i wskazuje, gdzie sprawdzić najnowsze wersje przepisów."],
+      ["W jakim formacie dostanę pliki i na czym mogę je czytać?", "PDF i EPUB, oba w cenie. PDF sprawdza się przy arkuszach z Załącznika A, bo dobrze się drukuje. EPUB lepiej dopasowuje się do ekranu telefonu i czytnika."],
+      ["Jak wygląda zakup?", "Przycisk prowadzi do zewnętrznej platformy sprzedaży, która obsługuje płatność i dostarcza pliki. Regulamin zakupu, zasady reklamacji i dane sprzedawcy znajdziesz na tej platformie przed dokonaniem płatności."],
+      ["Czy w książce podane są konkretne kwoty alimentów albo spłaty?", "Nie, bo takich kwot nie da się podać w oderwaniu od sprawy. Są natomiast pełne mechanizmy wyliczeń, przykłady rachunkowe prowadzone na jednej parze przez całą książkę oraz widełki orzekane przez sądy w praktyce."],
+    ];
+    const faq = faqDane.map(([pytanie, odpowiedz], i) => ({
+      pytanie, odpowiedz,
+      open: this.state.openFaq === i,
+      znak: this.state.openFaq === i ? "–" : "+",
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })),
+    }));
+    const wyrozniki = [
+      { nr: "01", tytul: "Wszystko w jednym miejscu", opis: "Podział majątku, kredyt hipoteczny, alimenty, konta emerytalne, budżet i zdolność kredytowa to naczynia połączone. Decyzja w jednym obszarze zmienia sytuację w pozostałych. Przewodnik prowadzi przez wszystkie dziesięć obszarów, a Rozdział 8 spina je w harmonogram na dwanaście miesięcy.", dowod: "Jeden dokument zamiast kilkudziesięciu artykułów z różnych stron." },
+      { nr: "02", tytul: "Stan prawny na 2026 rok", opis: "W ostatnich trzech latach zmieniło się wiele, a duża część publikacji w sieci nie ma nawet daty. Przewodnik uwzględnia zmiany z lat 2023 do 2025 i pokazuje, które popularne informacje straciły aktualność.", dowod: "Przykład: tablica alimentacyjna z lipca 2025 roku została wycofana, a liczne artykuły nadal opisują ją jako obowiązującą." },
+      { nr: "03", tytul: "Ludzkim językiem, z podaniem podstawy", opis: "Mechanizmy prawne wyjaśnione są normalną polszczyzną i pokazane na liczbach, na przykładzie jednej pary prowadzonej przez całą książkę. Przy każdym rozdziale podane są przepisy, na których się opiera, więc treść da się sprawdzić albo pokazać prawnikowi.", dowod: "Każdy rozdział kończy się sekcją Podstawy prawne, z artykułami i sygnaturami." },
+      { nr: "04", tytul: "Gotowe narzędzia w komplecie", opis: "Finanse porządkują wypełnione arkusze i wysłane pisma. Dlatego do przewodnika dołączony jest komplet jedenastu narzędzi: checklisty, arkusze do uzupełnienia i wzory wniosków do banku, funduszu emerytalnego i ZUS.", dowod: "Załącznik A, jedenaście dokumentów do wydrukowania albo skopiowania." },
+    ];
+    const narzedzia = [
+      ["A1", "Checklista pierwszych 30 dni, dwanaście punktów do odhaczenia"],
+      ["A2", "Checklista dokumentów do zebrania, w podziale na pięć kategorii"],
+      ["A3", "Arkusz inwentaryzacji majątku wspólnego, z osobną tabelą na wszystkie siedem produktów emerytalnych"],
+      ["A4", "Arkusz budżetu miesięcznego, z miejscem na wyliczenie wskaźnika DStI i celu poduszki bezpieczeństwa"],
+      ["A5", "Wzór wniosku o cesję kredytu hipotecznego"],
+      ["A6", "Wzór wniosku o wypłatę transferową IKE lub IKZE"],
+      ["A7", "Wzór wniosku o podział środków OFE"],
+      ["A8", "Wzór wniosku o podział subkonta ZUS"],
+      ["A9", "Wzór pisma o zmianę uposażonego"],
+      ["A10", "Lista pytań do prawnika rodzinnego na pierwszą konsultację"],
+      ["A11", "Lista pytań do doradcy kredytowego z licencją KNF"],
+    ].map(([kod, nazwa]) => ({ kod, nazwa }));
+    return {
+      cenaPremierowa: cena,
+      cenaRegularna: this.props.cenaRegularna ?? "89,90 zł",
+      terminOferty: this.props.terminOferty ?? "Cena premierowa obowiązuje do 6 września 2026. Od 7 września cena regularna 89,90 zł.",
+      terminOfertyOferta: this.props.terminOfertyOferta ?? "Cena premierowa obowiązuje do niedzieli 6 września 2026 włącznie. Od 7 września przewodnik będzie dostępny w cenie regularnej 89,90 zł.",
+      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Cena premierowa do 6 września 2026. Od 7 września 89,90 zł.",
+      tekstCta: "Kup przewodnik za " + cena,
+      isMobile, isDesktop: !isMobile,
+      showSticky: isMobile && this.state.y > 560,
+      rozdzialy, faq, wyrozniki, narzedzia,
+    };
+  }
+}
+</script>
+</body>
+</html>

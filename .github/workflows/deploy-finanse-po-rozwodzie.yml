@@ -1,0 +1,47 @@
+name: Deploy finanse-po-rozwodzie
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Upload finanse-po-rozwodzie over SFTP
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_REMOTE_PATH: ${{ secrets.SFTP_REMOTE_PATH }}
+        run: |
+          LANDING_SLUG="finanse-po-rozwodzie"
+          REMOTE_PARENT="$(dirname "$SFTP_REMOTE_PATH")"
+          REMOTE_DIR="finanse-po-rozwodzie"
+
+          sshpass -p "$SFTP_PASSWORD" sftp -oBatchMode=no -oStrictHostKeyChecking=no -P "$SFTP_PORT" "$SFTP_USERNAME@$SFTP_HOST" <<EOF
+          cd $REMOTE_PARENT
+          put index.html index.html
+          -mkdir assets
+          -mkdir assets/logo
+          put -r assets/logo assets/
+          -mkdir $REMOTE_DIR
+          cd $REMOTE_DIR
+          put landing-pages/$LANDING_SLUG/.htaccess .htaccess
+          put landing-pages/$LANDING_SLUG/index.html index.html
+          put landing-pages/$LANDING_SLUG/theme.css theme.css
+          -mkdir dziekuje
+          put landing-pages/$LANDING_SLUG/dziekuje/index.html dziekuje/index.html
+          -rm -r assets
+          put -r landing-pages/$LANDING_SLUG/assets ./
+          bye
+          EOF

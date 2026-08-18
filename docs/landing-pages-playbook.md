@@ -69,6 +69,9 @@ Repozytorium jest przygotowane pod wiele landingów dla różnych publikacji. Ka
 3. Ścieżki do assetów mają być lokalne względem katalogu landingu, np. `./assets/images/okladka.png`.
 4. Strona `dziekuje/` powinna używać linków względnych do strony produktu, np. `../`.
 5. Jeśli landing zachowuje Tailwind z CDN, konfiguracja fontów ma czytać wartości z CSS variables. Jeśli kiedyś dojdzie build step, można to scentralizować mocniej.
+6. Jeśli LP ma już lokalnie zbudowany Tailwind, preferowany jest `tailwind.output.css`, a nie CDN.
+7. Root `index.html` jest katalogiem publikacji, nie kolejnym osobnym LP produktowym.
+8. Każdy nowy LP powinien mieć przewidywalne, absolutne ścieżki produkcyjne dopiero wtedy, gdy faktycznie jest linkowany z root homepage albo innych stron.
 
 ## Zasady CSS
 
@@ -77,6 +80,38 @@ Repozytorium jest przygotowane pod wiele landingów dla różnych publikacji. Ka
 3. `theme.css` jest jedynym miejscem, gdzie landing definiuje swój charakter wizualny.
 4. Jeśli dwa landingi mają wyglądać inaczej, to jest oczekiwane zachowanie, nie wyjątek.
 5. Jeżeli styl danego LP wymaga własnych ikon albo własnego sposobu kadrowania obrazów, trzymamy to lokalnie w jego katalogu.
+
+## Zasady performance i assetów
+
+1. Hero i kluczowe mockupy eksportujemy do WebP.
+2. Dla dużych okładek i podglądów przygotowujemy także lżejsze warianty mobilne, np. `-420`, `-720`, `-1200`.
+3. Obrazy wyświetlane na stronie powinny mieć ustawione:
+   - `width`
+   - `height`
+   - `decoding="async"`
+4. Obrazy poza sekcją hero powinny domyślnie mieć `loading="lazy"`.
+5. Najważniejszy obraz hero może mieć `fetchpriority="high"` i preload tylko wtedy, gdy realnie jest kandydatem do LCP.
+6. Jeżeli obraz ma duży oryginał i mniejszy realny rozmiar renderowania, używamy `srcset` i `sizes`.
+7. Nie ładujemy ciężkich assetów lightboxa albo modala przy pierwszym renderze, jeśli użytkownik jeszcze ich nie otworzył.
+8. Jeśli slider lub galeria ma na mobile małe elementy sterujące, trzeba od razu pilnować sensownego target size, a nie tylko wyglądu.
+9. Zewnętrzne skrypty marketingowe traktujemy jako koszt performance. Jeśli nie są krytyczne dla pierwszego renderu, mogą być opóźniane do `load`, `idle` albo pierwszej interakcji.
+10. Dla LP publikowanych na hostingu bez dodatkowej warstwy cache standardem jest lokalny `.htaccess` z nagłówkami cache dla assetów statycznych.
+
+## Zasady brandingu i elementów wspólnych
+
+1. Każdy LP powinien używać spójnego logo i favicony zgodnych z aktualnym brandingiem Officinum.
+2. Footer nie powinien być wymyślany od zera przy każdym LP. Bazujemy na jednym wspólnym wzorze i tylko podmieniamy treści, jeśli publikacja wymaga innego disclaimeru.
+3. W footerze standardowo pilnujemy:
+   - linku do regulaminu
+   - linku do polityki prywatności
+   - copyright
+4. Jeśli dany LP dotyczy podatków, prawa albo inwestowania, disclaimer powinien być jawny i dopasowany do tematu.
+5. Root homepage powinna być utrzymywana jako prosty katalog ebooków:
+   - logo
+   - tytuł sekcji lub strony
+   - okładki publikacji
+   - linki do aktywnych LP
+6. Po dodaniu nowego aktywnego LP trzeba zdecydować, czy ma się pojawić także na root homepage.
 
 ## Zasady wdrożenia
 
@@ -88,6 +123,24 @@ Repozytorium jest przygotowane pod wiele landingów dla różnych publikacji. Ka
    - cały `assets/`
 3. Jeśli repo pozostaje bez build stepu, landing ma być możliwie samowystarczalny przy publikacji.
 4. Jeśli liczba landingów wzrośnie, następnym krokiem powinno być dołożenie lekkiego generatora statycznego albo prostego etapu eksportu do katalogu `.dist/`.
+
+## Zasady checklisty przed publikacją
+
+1. Sprawdź, czy wszystkie linki CTA prowadzą do właściwego checkoutu lub strony docelowej.
+2. Sprawdź, czy `dziekuje/index.html` wraca poprawnie do nadrzędnego LP.
+3. Sprawdź, czy wszystkie obrazy mają lokalne ścieżki i nie odwołują się do innego landingu.
+4. Sprawdź, czy root homepage nie zawiera 404 po dodaniu nowej publikacji.
+5. Sprawdź, czy workflow deployu publikuje:
+   - `index.html`
+   - `dziekuje/index.html`
+   - CSS
+   - `.htaccess`, jeśli jest używany
+   - cały katalog `assets/`
+6. Po deployu wykonaj szybki test produkcyjny:
+   - wejście na LP
+   - wejście na stronę podziękowania
+   - ładowanie obrazów
+   - podstawowy Lighthouse mobile
 
 ## Krytyczne zasady deployu
 
