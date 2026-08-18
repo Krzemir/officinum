@@ -78,13 +78,26 @@
       href="../../assets/logo/favicon-officinum.png"
     />
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      as="style"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link
       rel="preload"
       as="image"
-      href="./assets/images/okladka.png"
+      href="./assets/images/okladka-720.webp"
       fetchpriority="high"
     />
     <link
@@ -130,26 +143,12 @@
               aria-hidden="true"
             >
               <div class="lp-hero-visual-stack">
-                <div class="lp-hero-visual">
+                <div class="lp-hero-visual lp-hero-visual--solo">
                   <img
-                    class="lp-cover-bonus-top"
-                    src="./assets/images/addon-B.png"
-                    alt="Załącznik B: Lista źródeł"
-                    width="1024"
-                    height="1536"
-                    decoding="async"
-                  />
-                  <img
-                    class="lp-cover-bonus-bottom"
-                    src="./assets/images/addon-A.png"
-                    alt="Załącznik A: Checklisty i wzory dokumentów"
-                    width="1024"
-                    height="1535"
-                    decoding="async"
-                  />
-                  <img
-                    class="lp-cover-main"
-                    src="./assets/images/okladka.png"
+                    class="lp-cover-main lp-cover-main--solo"
+                    src="./assets/images/okladka-360.webp"
+                    srcset="./assets/images/okladka-360.webp 360w, ./assets/images/okladka-720.webp 720w"
+                    sizes="72vw"
                     alt="Okładka e-booka Finanse po rozwodzie"
                     width="1086"
                     height="1448"
@@ -187,23 +186,31 @@
               <div class="lp-hero-visual">
                 <img
                   class="lp-cover-bonus-top"
-                  src="./assets/images/addon-B.png"
+                  src="./assets/images/addon-b-360.webp"
+                  srcset="./assets/images/addon-b-360.webp 360w, ./assets/images/addon-b-720.webp 720w"
+                  sizes="184px"
                   alt="Załącznik B: Lista źródeł"
                   width="1024"
                   height="1536"
+                  loading="lazy"
                   decoding="async"
                 />
                 <img
                   class="lp-cover-bonus-bottom"
-                  src="./assets/images/addon-A.png"
+                  src="./assets/images/addon-a-360.webp"
+                  srcset="./assets/images/addon-a-360.webp 360w, ./assets/images/addon-a-720.webp 720w"
+                  sizes="184px"
                   alt="Załącznik A: Checklisty i wzory dokumentów"
                   width="1024"
                   height="1535"
+                  loading="lazy"
                   decoding="async"
                 />
                 <img
                   class="lp-cover-main"
-                  src="./assets/images/okladka.png"
+                  src="./assets/images/okladka-360.webp"
+                  srcset="./assets/images/okladka-360.webp 360w, ./assets/images/okladka-720.webp 720w"
+                  sizes="240px"
                   alt="Okładka e-booka Finanse po rozwodzie"
                   width="1086"
                   height="1448"
@@ -276,10 +283,13 @@
             <div class="lp-offer-grid">
               <article class="lp-product-card">
                 <img
-                  src="./assets/images/okladka.png"
+                  src="./assets/images/okladka-360.webp"
+                  srcset="./assets/images/okladka-360.webp 360w, ./assets/images/okladka-720.webp 720w"
+                  sizes="(min-width: 760px) 220px, 64vw"
                   alt="Okładka przewodnika"
                   width="1086"
                   height="1448"
+                  loading="lazy"
                   decoding="async"
                 />
                 <div class="lp-product-title">Przewodnik, 171 stron</div>
@@ -290,10 +300,13 @@
               <div class="lp-bonus-column">
                 <article class="lp-bonus-card">
                   <img
-                    src="./assets/images/addon-A.png"
+                    src="./assets/images/addon-a-360.webp"
+                    srcset="./assets/images/addon-a-360.webp 360w, ./assets/images/addon-a-720.webp 720w"
+                    sizes="104px"
                     alt="Okładka Załącznika A"
                     width="1024"
                     height="1535"
+                    loading="lazy"
                     decoding="async"
                   />
                   <div style="flex: 1 1 220px; display: grid; gap: 10px">
@@ -310,10 +323,13 @@
 
                 <article class="lp-bonus-card">
                   <img
-                    src="./assets/images/addon-B.png"
+                    src="./assets/images/addon-b-360.webp"
+                    srcset="./assets/images/addon-b-360.webp 360w, ./assets/images/addon-b-720.webp 720w"
+                    sizes="104px"
                     alt="Okładka Załącznika B"
                     width="1024"
                     height="1536"
+                    loading="lazy"
                     decoding="async"
                   />
                   <div style="flex: 1 1 220px; display: grid; gap: 10px">
@@ -978,10 +994,13 @@
             <div class="lp-offer-card">
               <div class="lp-offer-book">
                 <img
-                  src="./assets/images/okladka.png"
+                  src="./assets/images/okladka-360.webp"
+                  srcset="./assets/images/okladka-360.webp 360w, ./assets/images/okladka-720.webp 720w"
+                  sizes="220px"
                   alt="Okładka e-booka Finanse po rozwodzie"
                   width="1086"
                   height="1448"
+                  loading="lazy"
                   decoding="async"
                 />
               </div>
@@ -1248,11 +1267,13 @@
       <footer class="lp-footer">
         <div class="lp-container lp-footer-inner">
           <img
-            src="./assets/images/logo-officinum-negative.png"
+            src="./assets/images/logo-officinum-negative-440.webp"
             alt="Officinum"
             width="220"
             height="34"
             class="lp-footer-brand"
+            loading="lazy"
+            decoding="async"
           />
           <p class="lp-footer-copy">
             Publikacja ma charakter edukacyjny i informacyjny. Nie stanowi porady prawnej, podatkowej ani rekomendacji inwestycyjnej w rozumieniu obowiązujących przepisów. Przed podjęciem decyzji o skutkach majątkowych warto skonsultować się z prawnikiem, doradcą podatkowym albo doradcą kredytowym.

@@ -228,9 +228,19 @@ select {
   aspect-ratio: 6 / 7;
 }
 
+.lp-hero-visual--solo {
+  width: min(280px, 72vw);
+  aspect-ratio: auto;
+}
+
 .lp-hero-visual img {
   position: absolute;
   border-radius: 4px;
+}
+
+.lp-hero-visual--solo img {
+  position: relative;
+  display: block;
 }
 
 .lp-cover-main {
@@ -239,6 +249,12 @@ select {
   width: 60%;
   box-shadow: 0 16px 40px rgba(38, 43, 51, 0.26);
   transform: rotate(-2deg);
+}
+
+.lp-cover-main--solo {
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .lp-cover-bonus-top {
