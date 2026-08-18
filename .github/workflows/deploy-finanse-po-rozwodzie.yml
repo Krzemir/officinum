@@ -41,7 +41,7 @@ jobs:
           put landing-pages/$LANDING_SLUG/theme.css theme.css
           -mkdir dziekuje
           put landing-pages/$LANDING_SLUG/dziekuje/index.html dziekuje/index.html
-          -rm -r assets
+          -mkdir assets
           put -r landing-pages/$LANDING_SLUG/assets ./
           bye
           EOF
