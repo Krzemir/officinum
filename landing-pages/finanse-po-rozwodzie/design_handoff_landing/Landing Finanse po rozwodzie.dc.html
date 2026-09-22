@@ -316,7 +316,7 @@
   <!-- ===== 11. OFERTA ===== -->
   <section data-screen-label="11 Oferta" style="background: #262B33;">
     <div style="max-width: 980px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 24px;">
-      <h2 style="margin: 0 0 36px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center; color: #FBF7EC;">Cena premierowa do 6 września</h2>
+      <h2 style="margin: 0 0 36px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center; color: #FBF7EC;">Cena premierowa do 30 września</h2>
       <div style="background: #FBF7EC; border-radius: 14px; box-shadow: 0 24px 64px rgba(0,0,0,0.35); padding: clamp(28px, 5vw, 56px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 48px); align-items: center;">
         <div style="flex: 0 1 240px; min-width: 180px; display: flex; justify-content: center;">
           <img src="uploads/okladka.png" alt="Okładka e-booka Finanse po rozwodzie" style="width: min(220px, 100%); border-radius: 4px; box-shadow: 0 16px 40px rgba(38,43,51,0.3); transform: rotate(-2deg);">
@@ -420,9 +420,9 @@
 <script type="text/x-dc" data-dc-script data-props="{
   &quot;cenaPremierowa&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;69,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
   &quot;cenaRegularna&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;89,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa obowiązuje do 6 września 2026. Od 7 września cena regularna 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa obowiązuje do niedzieli 6 września 2026 włącznie. Od 7 września przewodnik będzie dostępny w cenie regularnej 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa do 6 września 2026. Od 7 września 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
+  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa obowiązuje do 30 września 2026. Od 1 października cena regularna 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa obowiązuje do środy 30 września 2026 włącznie. Od 1 października przewodnik będzie dostępny w cenie regularnej 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena premierowa do 30 września 2026. Od 1 października 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
 }">
 class Component extends DCLogic {
   state = { w: 1200, y: 0, openChapter: -1, openFaq: 0 };
@@ -496,9 +496,9 @@ class Component extends DCLogic {
     return {
       cenaPremierowa: cena,
       cenaRegularna: this.props.cenaRegularna ?? "89,90 zł",
-      terminOferty: this.props.terminOferty ?? "Cena premierowa obowiązuje do 6 września 2026. Od 7 września cena regularna 89,90 zł.",
-      terminOfertyOferta: this.props.terminOfertyOferta ?? "Cena premierowa obowiązuje do niedzieli 6 września 2026 włącznie. Od 7 września przewodnik będzie dostępny w cenie regularnej 89,90 zł.",
-      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Cena premierowa do 6 września 2026. Od 7 września 89,90 zł.",
+      terminOferty: this.props.terminOferty ?? "Cena premierowa obowiązuje do 30 września 2026. Od 1 października cena regularna 89,90 zł.",
+      terminOfertyOferta: this.props.terminOfertyOferta ?? "Cena premierowa obowiązuje do środy 30 września 2026 włącznie. Od 1 października przewodnik będzie dostępny w cenie regularnej 89,90 zł.",
+      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Cena premierowa do 30 września 2026. Od 1 października 89,90 zł.",
       tekstCta: "Kup przewodnik za " + cena,
       isMobile, isDesktop: !isMobile,
       showSticky: isMobile && this.state.y > 560,
