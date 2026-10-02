@@ -413,9 +413,9 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
   &quot;cena&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;89,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
+  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
 }">
 class Component extends DCLogic {
   state = { w: 1200, y: 0, openChapter: -1, openFaq: 0 };
@@ -488,9 +488,9 @@ class Component extends DCLogic {
     ].map(([kod, nazwa]) => ({ kod, nazwa }));
     return {
       cena,
-      terminOferty: this.props.terminOferty ?? "Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
-      terminOfertyOferta: this.props.terminOfertyOferta ?? "Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
-      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
+      terminOferty: this.props.terminOferty ?? "Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
+      terminOfertyOferta: this.props.terminOfertyOferta ?? "Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
+      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
       tekstCta: "Kup przewodnik za " + cena,
       isMobile, isDesktop: !isMobile,
       showSticky: isMobile && this.state.y > 560,

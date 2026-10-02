@@ -33,7 +33,7 @@ Inne: radius kart 10 px (oferta 14 px, przyciski 8 px); cienie subtelne `rgba(38
 ## Zmienne (podmieniane po premierze)
 Wartości występujące w wielu miejscach wdrożyć jako zmienne/konfigurację:
 - `cena` = „89,90 zł" (hero, oferta, ostatnie CTA, sticky bar, tekst wszystkich przycisków CTA)
-- komunikat wartości: „Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże."
+- komunikat wartości: „Jedna konsultacja u adwokata to zwykle od 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże."
 
 ## Elementy powtarzalne
 - **Przycisk CTA** (4×: sekcje 1, 9, 11, 13): zielony `#3E6647`, tekst `#FBF7EC` 18 px/700, padding 18px 24px, radius 8 px, szerokość 100% do max 460 px. Hover: `#345239`, uniesienie −1 px, mocniejszy cień; active: `#2C4731`, +1 px. Treść zawsze: „Kup przewodnik za {cena}". Link do zewnętrznego koszyka (adres do podania; w prototypie `#koszyk`).
