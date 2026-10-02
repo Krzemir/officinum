@@ -162,17 +162,16 @@
 
             <div class="lp-price-stack">
               <div class="lp-price-row">
-                <span class="lp-price-current">69,90 zł</span>
-                <span class="lp-price-regular">89,90 zł</span>
+                <span class="lp-price-current">89,90 zł</span>
               </div>
-              <div class="lp-date-line">Cena promocyjna 69,90 zł obowiązuje do <strong data-promo-deadline>końca dzisiejszego dnia</strong>.</div>
+              <div class="lp-date-line">Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.</div>
             </div>
 
             <div class="lp-cta-stack">
               <a
                 class="lp-cta"
                 href="https://cart.easy.tools/checkout/officinum/finanse-po-rozwodzie"
-                >Kup przewodnik za 69,90 zł</a
+                >Kup przewodnik za 89,90 zł</a
               >
               <p class="lp-note lp-note-center">PDF i EPUB. Dostęp od razu po zakupie. Płatność obsługuje zewnętrzna platforma sprzedaży.</p>
             </div>
@@ -941,7 +940,7 @@
               <a
                 class="lp-cta"
                 href="https://cart.easy.tools/checkout/officinum/finanse-po-rozwodzie"
-                >Kup przewodnik za 69,90 zł</a
+                >Kup przewodnik za 89,90 zł</a
               >
             </div>
           </div>
@@ -990,7 +989,7 @@
 
         <section class="lp-offer-section lp-section">
           <div class="lp-container-offer">
-            <h2 class="lp-display lp-h2 lp-offer-heading">Cena promocyjna 69,90 zł</h2>
+            <h2 class="lp-display lp-h2 lp-offer-heading">Cena przewodnika: 89,90 zł</h2>
             <div class="lp-offer-card">
               <div class="lp-offer-book">
                 <img
@@ -1018,11 +1017,9 @@
                   <div class="lp-offer-item"><span class="lp-offer-mark">✓</span><span>Dostęp od razu po zakupie, pliki zostają na stałe</span></div>
                 </div>
                 <div class="lp-price-row">
-                  <span class="lp-price-current lp-price-current-large">69,90 zł</span>
-                  <span class="lp-price-regular">89,90 zł</span>
-                  <span class="lp-price-label">cena regularna</span>
+                  <span class="lp-price-current lp-price-current-large">89,90 zł</span>
                 </div>
-                <div class="lp-date-box">Cena promocyjna 69,90 zł obowiązuje do <strong data-promo-deadline>końca dzisiejszego dnia</strong>. Cena regularna: 89,90 zł.</div>
+                <div class="lp-date-box">Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.</div>
                 <div
                   class="lp-cta-stack"
                   style="max-width: none"
@@ -1030,13 +1027,12 @@
                   <a
                     class="lp-cta"
                     href="https://cart.easy.tools/checkout/officinum/finanse-po-rozwodzie"
-                    >Kup przewodnik za 69,90 zł</a
+                    >Kup przewodnik za 89,90 zł</a
                   >
                   <p class="lp-note lp-note-center">Przejdziesz do zewnętrznej platformy sprzedaży, która obsługuje płatność i dostarcza pliki.</p>
                 </div>
               </div>
             </div>
-            <p class="lp-offer-compare">Dla porównania: godzina konsultacji u prawnika rodzinnego kosztuje zwykle 300 do 500 zł i starcza na jeden temat.</p>
           </div>
         </section>
 
@@ -1244,15 +1240,14 @@
                 class="lp-price-row"
                 style="justify-content: center"
               >
-                <span class="lp-price-current-dark">69,90 zł</span>
-                <span class="lp-price-regular lp-price-regular-dark">89,90 zł</span>
+                <span class="lp-price-current-dark">89,90 zł</span>
               </div>
-              <div class="lp-date-line-dark">Cena promocyjna 69,90 zł obowiązuje do <strong data-promo-deadline>końca dzisiejszego dnia</strong>.</div>
+              <div class="lp-date-line-dark">Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.</div>
             </div>
             <a
               class="lp-cta"
               href="https://cart.easy.tools/checkout/officinum/finanse-po-rozwodzie"
-              >Kup przewodnik za 69,90 zł</a
+              >Kup przewodnik za 89,90 zł</a
             >
             <div
               class="lp-note"
@@ -1292,8 +1287,7 @@
         id="sticky-bar"
       >
         <div class="lp-sticky-price">
-          <span class="lp-sticky-current">69,90 zł</span>
-          <span class="lp-sticky-regular">89,90 zł</span>
+          <span class="lp-sticky-current">89,90 zł</span>
         </div>
         <a
           class="lp-sticky-link"
@@ -1305,24 +1299,6 @@
 
     <script>
       (() => {
-        const promoDateFormatter = new Intl.DateTimeFormat('pl-PL', {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric',
-          timeZone: 'Europe/Warsaw'
-        });
-
-        const updatePromoCopy = () => {
-          const promoDate = promoDateFormatter.format(new Date());
-
-          document.querySelectorAll('[data-promo-deadline]').forEach(element => {
-            element.textContent = `${promoDate}, godz. 23:59`;
-          });
-        };
-
-        updatePromoCopy();
-        window.setInterval(updatePromoCopy, 60 * 1000);
-
         const gtmId = 'GTM-5FPBJ3VJ';
         let gtmLoaded = false;
 

@@ -41,8 +41,7 @@
       </sc-if>
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <div style="display: flex; align-items: baseline; gap: 14px;">
-          <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 58px; color: #A9691F; line-height: 1;">{{ cenaPromocyjna }}</span>
-          <span style="font-size: 27px; color: #8A8578; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: #A9691F;">{{ cenaRegularna }}</span>
+          <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 58px; color: #A9691F; line-height: 1;">{{ cena }}</span>
         </div>
         <div style="font-size: 15px; line-height: 1.5; color: #6B6353; max-width: 48ch;">{{ terminOferty }}</div>
       </div>
@@ -316,7 +315,7 @@
   <!-- ===== 11. OFERTA ===== -->
   <section data-screen-label="11 Oferta" style="background: #262B33;">
     <div style="max-width: 980px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 24px;">
-      <h2 style="margin: 0 0 36px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center; color: #FBF7EC;">Cena promocyjna 69,90 zł</h2>
+      <h2 style="margin: 0 0 36px; font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; text-align: center; color: #FBF7EC;">Cena przewodnika: 89,90 zł</h2>
       <div style="background: #FBF7EC; border-radius: 14px; box-shadow: 0 24px 64px rgba(0,0,0,0.35); padding: clamp(28px, 5vw, 56px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 48px); align-items: center;">
         <div style="flex: 0 1 240px; min-width: 180px; display: flex; justify-content: center;">
           <img src="uploads/okladka.png" alt="Okładka e-booka Finanse po rozwodzie" style="width: min(220px, 100%); border-radius: 4px; box-shadow: 0 16px 40px rgba(38,43,51,0.3); transform: rotate(-2deg);">
@@ -335,9 +334,7 @@
             <div style="display: flex; gap: 11px;"><span style="color: #3E6647; font-weight: 700;">✓</span><span>Dostęp od razu po zakupie, pliki zostają na stałe</span></div>
           </div>
           <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 62px; color: #A9691F; line-height: 1;">{{ cenaPromocyjna }}</span>
-            <span style="font-size: 27px; color: #8A8578; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: #A9691F;">{{ cenaRegularna }}</span>
-            <span style="font-size: 15px; color: #8A8578;">cena regularna</span>
+            <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 62px; color: #A9691F; line-height: 1;">{{ cena }}</span>
           </div>
           <div style="background: #F6E8D2; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.5; font-weight: 600; color: #7A4E1A;">{{ terminOfertyOferta }}</div>
           <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -348,7 +345,6 @@
           </div>
         </div>
       </div>
-      <p style="margin: 28px auto 0; max-width: 62ch; text-align: center; font-size: 15px; line-height: 1.6; color: #9BA0A8;">Dla porównania: godzina konsultacji u prawnika rodzinnego kosztuje zwykle 300 do 500 zł i starcza na jeden temat.</p>
     </div>
   </section>
 
@@ -377,8 +373,7 @@
       <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B4B0A4; max-width: 54ch;">Finansowa strona rozwodu w jednym dokumencie, ułożona w kolejności działania, z listami kontrolnymi, arkuszami do wypełnienia i wskazaniem przepisów przy każdym rozdziale.</p>
       <div style="display: flex; flex-direction: column; gap: 6px; align-items: center;">
         <div style="display: flex; align-items: baseline; gap: 14px;">
-          <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 58px; color: #DCA75B; line-height: 1;">{{ cenaPromocyjna }}</span>
-          <span style="font-size: 27px; color: #8A8D93; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: #DCA75B;">{{ cenaRegularna }}</span>
+          <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 58px; color: #DCA75B; line-height: 1;">{{ cena }}</span>
         </div>
         <div style="font-size: 15px; color: #9BA0A8;">{{ terminOfertyKrotki }}</div>
       </div>
@@ -407,8 +402,7 @@
   <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
     <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #FBF7EC; border-top: 1px solid #DACFB6; box-shadow: 0 -4px 16px rgba(38,43,51,0.12); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
       <div style="display: flex; align-items: baseline; gap: 8px;">
-        <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 22px; color: #A9691F;">{{ cenaPromocyjna }}</span>
-        <span style="font-size: 13px; color: #8A8578; text-decoration: line-through;">{{ cenaRegularna }}</span>
+        <span style="font-family: 'Spectral', serif; font-weight: 700; font-size: 22px; color: #A9691F;">{{ cena }}</span>
       </div>
       <a href="#koszyk" style="display: block; padding: 12px 22px; background: #3E6647; color: #FBF7EC; text-decoration: none; font-size: 15px; font-weight: 700; border-radius: 7px; white-space: nowrap;"
          style-hover="background: #345239; color: #FBF7EC;"
@@ -418,11 +412,10 @@
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
-  &quot;cenaPromocyjna&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;69,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;cenaRegularna&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;89,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena promocyjna 69,90 zł obowiązuje do {data}, godz. 23:59.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena promocyjna 69,90 zł obowiązuje do {data}, godz. 23:59. Cena regularna: 89,90 zł.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
-  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Cena promocyjna 69,90 zł obowiązuje do {data}, godz. 23:59.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
+  &quot;cena&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;89,90 zł&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOferty&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyOferta&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;},
+  &quot;terminOfertyKrotki&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oferta&quot;}
 }">
 class Component extends DCLogic {
   state = { w: 1200, y: 0, openChapter: -1, openFaq: 0 };
@@ -438,7 +431,7 @@ class Component extends DCLogic {
     window.removeEventListener('scroll', this._onS);
   }
   renderVals() {
-    const cena = this.props.cenaPromocyjna ?? "69,90 zł";
+    const cena = this.props.cena ?? "89,90 zł";
     const isMobile = this.state.w < 760;
     const rozdzialyDane = [
       ["Pierwsze 30 dni po wyroku", "Dwanaście ruchów w kolejności, w jakiej trzeba je wykonać, z informacją, ile zajmują, jakich dokumentów wymagają i czym grozi ich pominięcie."],
@@ -494,11 +487,10 @@ class Component extends DCLogic {
       ["A11", "Lista pytań do doradcy kredytowego z licencją KNF"],
     ].map(([kod, nazwa]) => ({ kod, nazwa }));
     return {
-      cenaPromocyjna: cena,
-      cenaRegularna: this.props.cenaRegularna ?? "89,90 zł",
-      terminOferty: this.props.terminOferty ?? "Cena promocyjna 69,90 zł obowiązuje do {data}, godz. 23:59.",
-      terminOfertyOferta: this.props.terminOfertyOferta ?? "Cena promocyjna 69,90 zł obowiązuje do {data}, godz. 23:59. Cena regularna: 89,90 zł.",
-      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Cena promocyjna 69,90 zł obowiązuje do {data}, godz. 23:59.",
+      cena,
+      terminOferty: this.props.terminOferty ?? "Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
+      terminOfertyOferta: this.props.terminOfertyOferta ?? "Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
+      terminOfertyKrotki: this.props.terminOfertyKrotki ?? "Jedna konsultacja u adwokata to minimum 300 zł. Przyjdź na nią przygotowany/a. Ten poradnik Ci w tym pomoże.",
       tekstCta: "Kup przewodnik za " + cena,
       isMobile, isDesktop: !isMobile,
       showSticky: isMobile && this.state.y > 560,
