@@ -32,12 +32,13 @@ Inne: radius kart 10 px (oferta 14 px, przyciski 8 px); cienie subtelne `rgba(38
 
 ## Zmienne (podmieniane po premierze)
 Trzy wartości występują w wielu miejscach — wdrożyć jako zmienne/konfigurację:
-- `cenaPremierowa` = „69,90 zł" (hero, oferta, ostatnie CTA, sticky bar, tekst wszystkich przycisków CTA)
+- `cenaPromocyjna` = „69,90 zł" (hero, oferta, ostatnie CTA, sticky bar, tekst wszystkich przycisków CTA)
 - `cenaRegularna` = „89,90 zł" (jw., jako przekreślona)
-- linijki daty: hero „Cena premierowa obowiązuje do 30 września 2026. Od 1 października cena regularna 89,90 zł."; oferta „…do środy 30 września 2026 włącznie. Od 1 października przewodnik będzie dostępny w cenie regularnej 89,90 zł."; ostatnie CTA „Cena premierowa do 30 września 2026. Od 1 października 89,90 zł."
+- komunikaty promocyjne: „Cena promocyjna 69,90 zł obowiązuje do {dzień, miesiąc i rok}, godz. 23:59."; w karcie oferty dodatkowo: „Cena regularna: 89,90 zł."
+- datę wyliczać po stronie przeglądarki w strefie `Europe/Warsaw` i aktualizować automatycznie po zmianie dnia
 
 ## Elementy powtarzalne
-- **Przycisk CTA** (4×: sekcje 1, 9, 11, 13): zielony `#3E6647`, tekst `#FBF7EC` 18 px/700, padding 18px 24px, radius 8 px, szerokość 100% do max 460 px. Hover: `#345239`, uniesienie −1 px, mocniejszy cień; active: `#2C4731`, +1 px. Treść zawsze: „Kup przewodnik za {cenaPremierowa}". Link do zewnętrznego koszyka (adres do podania; w prototypie `#koszyk`).
+- **Przycisk CTA** (4×: sekcje 1, 9, 11, 13): zielony `#3E6647`, tekst `#FBF7EC` 18 px/700, padding 18px 24px, radius 8 px, szerokość 100% do max 460 px. Hover: `#345239`, uniesienie −1 px, mocniejszy cień; active: `#2C4731`, +1 px. Treść zawsze: „Kup przewodnik za {cenaPromocyjna}". Link do zewnętrznego koszyka (adres do podania; w prototypie `#koszyk`).
 - **Blok ceny** (3×: sekcje 1, 11, 13): duża cena bieżąca (Spectral 700, bursztyn), obok przekreślona regularna, pod spodem linijka daty.
 - **Sticky bar (tylko mobile <760 px)**: pojawia się po przewinięciu > ~560 px; fixed bottom, tło `#FBF7EC`, border-top `#DACFB6`, cień ku górze; po lewej cena + przekreślona, po prawej kompaktowy zielony przycisk „Kup przewodnik".
 

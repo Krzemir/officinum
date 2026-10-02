@@ -165,7 +165,7 @@
                 <span class="lp-price-current">69,90 zł</span>
                 <span class="lp-price-regular">89,90 zł</span>
               </div>
-              <div class="lp-date-line">Cena premierowa obowiązuje do 30 września 2026. Od 1 października cena regularna 89,90 zł.</div>
+              <div class="lp-date-line">Cena promocyjna 69,90 zł obowiązuje do <strong data-promo-deadline>końca dzisiejszego dnia</strong>.</div>
             </div>
 
             <div class="lp-cta-stack">
@@ -990,7 +990,7 @@
 
         <section class="lp-offer-section lp-section">
           <div class="lp-container-offer">
-            <h2 class="lp-display lp-h2 lp-offer-heading">Cena premierowa do 30 września</h2>
+            <h2 class="lp-display lp-h2 lp-offer-heading">Cena promocyjna 69,90 zł</h2>
             <div class="lp-offer-card">
               <div class="lp-offer-book">
                 <img
@@ -1022,7 +1022,7 @@
                   <span class="lp-price-regular">89,90 zł</span>
                   <span class="lp-price-label">cena regularna</span>
                 </div>
-                <div class="lp-date-box">Cena premierowa obowiązuje do środy 30 września 2026 włącznie. Od 1 października przewodnik będzie dostępny w cenie regularnej 89,90 zł.</div>
+                <div class="lp-date-box">Cena promocyjna 69,90 zł obowiązuje do <strong data-promo-deadline>końca dzisiejszego dnia</strong>. Cena regularna: 89,90 zł.</div>
                 <div
                   class="lp-cta-stack"
                   style="max-width: none"
@@ -1247,7 +1247,7 @@
                 <span class="lp-price-current-dark">69,90 zł</span>
                 <span class="lp-price-regular lp-price-regular-dark">89,90 zł</span>
               </div>
-              <div class="lp-date-line-dark">Cena premierowa do 30 września 2026. Od 1 października 89,90 zł.</div>
+              <div class="lp-date-line-dark">Cena promocyjna 69,90 zł obowiązuje do <strong data-promo-deadline>końca dzisiejszego dnia</strong>.</div>
             </div>
             <a
               class="lp-cta"
@@ -1305,6 +1305,24 @@
 
     <script>
       (() => {
+        const promoDateFormatter = new Intl.DateTimeFormat('pl-PL', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+          timeZone: 'Europe/Warsaw'
+        });
+
+        const updatePromoCopy = () => {
+          const promoDate = promoDateFormatter.format(new Date());
+
+          document.querySelectorAll('[data-promo-deadline]').forEach(element => {
+            element.textContent = `${promoDate}, godz. 23:59`;
+          });
+        };
+
+        updatePromoCopy();
+        window.setInterval(updatePromoCopy, 60 * 1000);
+
         const gtmId = 'GTM-5FPBJ3VJ';
         let gtmLoaded = false;
 
