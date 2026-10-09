@@ -319,6 +319,16 @@ select {
   text-decoration-color: var(--color-amber-soft);
 }
 
+.lp-price-history {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-soft);
+}
+
+.lp-price-history-dark {
+  color: #b8bdc5;
+}
+
 .lp-price-label {
   font-size: 15px;
   color: var(--color-text-faint);
